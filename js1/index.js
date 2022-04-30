@@ -3,11 +3,10 @@ let comments = [];
 getComments();
 
 function getComments() {
-    fetch(`http://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/getLocation?id=1`)
+    fetch(`https://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/getLocation?id=1`)
     .then(
         function(getCommentsResponses) {
             return getCommentsResponses.json();
-            
         }
     ).then(
         function(getCommentsData) {
