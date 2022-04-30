@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom main1CRM  CSS -->
+    <link rel="stylesheet" href="css/main1CRM.css">
+</head>
+
+<body class="allCustBkB">
+    <!-------------------------------------------------------------------------->
+    <!-- SECTION :section of header-->
+    <!-------------------------------------------------------------------------->
+    <section class="generalHeader">
+        <div class="container">
+            <h1>
+                <i class="fas fa-users"></i> ALL ABOUT USERS
+            </h1>
+        </div>
+    </section>
+    <!-------------------------------------------------------------------------->
+    <!-- SECTION : search by and filter -->
+    <!-------------------------------------------------------------------------->
+    <div class="mainSearchByAFilter">
+        <div class="container">
+            <div class="row">
+                <!--one search-->
+                <div class="col-md-3">
+                    <div class="searchOrFilterPart">
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control searchIDField" placeholder="Search By ID" aria-label="Search By ID" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-warning searchIdBtn" type="button"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--one search-->
+                <div class="col-md-3">
+                    <div class="searchOrFilterPart">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control searchEmailField" placeholder="Search By Email" aria-label="Search By Email" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-warning searchEmailBtn" type="button"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--one search-->
+                <div class="col-md-3">
+                    <div class="searchOrFilterPart">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control searchNameField" placeholder="Search By Name" aria-label="Search By Name" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-warning searchNameBtn" type="button"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--one filter-->
+                <div class="col-md-3">
+                    <div class="searchOrFilterPart">
+
+                        <select class="custom-select custom-select-sm" onchange="selectFilterFunc(this)">
+                            <option selected value="Chosse Filter"disabled> -- Chosse Filter -- </option>
+                            <option value="all">all</option>
+                            <option value="customer">customer</option>
+                            <option value="vendor">vendor</option>
+                            <option value="company">company</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------------------------------------->
+    <!-- SECTION : table of users -->
+    <!-------------------------------------------------------------------------->
+    <section class=" tableAllUsers">
+        <div class="container generalTable">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">UserName</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Tag</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">D/R</th>
+                    </tr>
+                </thead>
+                <tbody class=" tableAllUsersTbody">
+                    <tr>
+                        <td colspan="9">
+                            <div class="alert alert-dark" role="alert">
+                                <i class="fas fa-spinner"></i> Wating...
+                            </div>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </section>
+    <!--  JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--custom allCustomersCRM JS-->
+    <script src="js/allCustomersCRM.js "></script>
+</body>
+
+</html>

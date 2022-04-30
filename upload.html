@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom main1CRM  CSS -->
+    <link rel="stylesheet" href="css/upload.css">
+    <style>
+        #img-preview{
+            width:100px;
+        }
+    </style>
+</head>
+
+<body >
+    <div class="uploadParent">
+    <div class="container">
+        <div class="row">
+            <!--<div class="card shadow-sm w-100">
+                <div class="card-header d-flex justify-content-between">-->
+                    <div class="col-lg-12">
+        <div class="uploadmain">
+            <div class="alert alert-danger alert-dismissible fade show errorUploadMsg" role="alert">
+<span class="errorUploadMsgSpan">There Is An Error :(</span>
+
+               
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                   </button>
+              </div>
+              <div class="alert alert-success alert-dismissible successUploadMsg fade show" role="alert">
+ Successfully Upload ;)
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+                 <form class="form formUpload" action="#" method="post" id="form">
+                    <h2 class="headerUpload"><i class="fas fa-cloud-upload-alt"></i> Upload Product</h2>
+                    <fieldset class="Gfieldset">
+                        <legend><i class="fas fa-file-alt"></i>  Main Information</legend>
+                         
+                        <!--name-->
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input class="form-control uProName" type="text"required>
+                      </div>
+                  
+                    <!--descripton-->
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control uProDescription"required rows="3"></textarea>
+                      </div>
+        
+                                 <!--category-->
+                                 <div class="form-group">
+                                    <label>Category</label>
+                                  <select class="form-control uProCategory"required>
+                                  
+                                  
+                                  </select>
+                                  </div>
+          
+                                                      <!--Price-->
+                                                      <div class="form-group">
+                                                        <label>Price</label>
+                                                        <input class="form-control uProPrice" required type="number">
+                                                      </div>
+                                          <!--Currency-->
+                                          <div class="form-group">
+                                            <label>Currency</label>
+                                            <input class="form-control uProCurrency" type="text"required>
+                                          </div>
+                      </fieldset>
+                      <fieldset class="Gfieldset">
+                        <legend><i class="fas fa-plus"></i> Additional Information</legend>
+                       
+                                   <!--Brand-->
+                    <div class="form-group">
+                        <label>Brand</label>
+                        <input class="form-control uProBrand" type="text"required>
+                      </div>
+                         
+                                        <!--color-->
+                                        <div class="form-group">
+                                            <label>Color</label>
+                                            <select class="form-control uProColor"required>
+                                              <option value="red">Red</option>
+                                              <option value="black">Black</option>
+                                              <option value="white">White</option>
+                                              <option value="blue">Blue</option>
+                                              <option value="yellow">Yellow</option>
+                                              <option value="pink">Pink</option>
+                                              <option value="Green">green</option>
+                                              <option value="gold">Gold</option>
+                                            </select>
+                                            </div>
+                                            </fieldset>
+                        <!--upload images-->
+                        <fieldset class="Gfieldset">
+                            <legend><i class="fas fa-images"></i> Images</legend>
+                             
+                    <div class="form-group">
+                  
+                     <input type="file" name="Image" id="image" multiple   class="d-none" onchange="image_select()">
+                     <button class="btn btn-primary m-auto d-block w-50" type="button" onclick="document.getElementById('image').click()"><i class="fas fa-file-upload"></i></button>
+                     </div>
+                     <div class=" d-flex flex-wrap justify-content-start" id="container">
+                        <!-- Image will be show here-->    	  
+                   </div>
+                   </fieldset>
+            
+                              <!--Dimensions-->
+                              <fieldset class="Gfieldset">
+                                <legend><i class="fas fa-border-style"></i> Dimensions</legend>
+                                         <!--Length-->
+                                         <div class="form-group">
+                                            <label>Length</label>
+                                            <input class="form-control uProLength"required type="number">
+                                          </div>
+                                                <!--Height-->
+                                                <div class="form-group">
+                                                    <label>Height</label>
+                                                    <input class="form-control uProHeight"required type="number">
+                                                  </div>
+                                              <!--Width-->
+                                              <div class="form-group">
+                                                <label>Width</label>
+                                                <input class="form-control uProWidth"required type="number">
+                                              </div>
+
+                                              <!--Weight-->
+                                              <div class="form-group">
+                                                <label>Weight</label>
+                                                <input class="form-control uProWeight"required type="number">
+                                              </div>
+                              
+                               </fieldset>
+                     <!--google map-->
+                     <fieldset class="Gfieldset">
+                        <legend><i class="fas fa-map-marker-alt"></i> Address</legend>
+                                
+                        <div class="form-group googleMapSec">
+                            <label class="text-center d-block">Choose Product  Address</label>
+                        <div id="map">
+            
+                        </div>
+                     </div>
+                     </fieldset>
+                     <div class="form-group">
+                     <button class="uploadBtn form-control btn btn-success"><i class="fas fa-upload"></i> Upload</button>
+                     </div>
+                    </form>
+     
+           
+         </div>
+     
+        </div>
+  </div>
+              
+</div>
+            
+</div>
+
+
+        <!--  JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+
+     <!--js google map api-->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASSYjL9pLjD1lqTZritm51EddkIeQQzMg&callback=initMap&v=weekly"
+    async
+  ></script>
+    <!--custom allCustomersCRM JS-->
+    <script src="js/upload.js "></script>
+</body>
+
+</html>

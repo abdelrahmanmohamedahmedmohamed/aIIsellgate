@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom login  CSS -->
+    <link rel="stylesheet" href="css/signStyle.css">
+    <title>SELL GATE</title>
+    <link rel="icon" href="img/Logo-removebg-preview (1).png">
+</head>
+
+<body>
+    <!--*******************************start form sign in ***************************************-->
+   <div class="loginParent">
+    <div class="container">
+     <div class="row">
+       
+     
+      <form action="#" class="loginForm form2 sign-form  col-md-5">
+        <h3 class="signword">
+            <i class="fas fa-user-circle"></i> SIGN IN 
+              </h3>
+        <img src="images/logo.png" alt="logo"class="signLogo">
+  
+     
+          <div class="mainErrorMessage alert alert-danger" role="alert">
+              Empty Fields...
+            </div>
+          <div class="loginSuccessMsg alert alert-success" role="alert">
+            success - wating ;)
+          </div>
+          <div class="loginerrorMsgNotExist alert alert-danger" role="alert">
+              User Not Exist
+          </div>
+          <div class="loginerrorMsgAlExist alert alert-warning" role="alert">
+              email already exit
+          </div>
+        <div class="form-group">
+          <label for="emailIn">Email</label>
+          <input type="email" name = "emailIn" class="emailField form-control" id="emailIn" aria-describedby="emailHelp">
+  
+        </div>
+        <div class="form-group">
+          <label for="passwordIn">Password</label>
+          <input type="password" name ="passwordIn"class="form-control passwordField" id="passwordIn" >
+        </div>
+        <div class="form-group">
+        
+          <!-----------------start forget password----------------------->
+          <!-- Button trigger modal -->
+          <a type="button" class="forget-pass d-flex justify-content-end" data-toggle="modal" data-target="#exampleModalFB">
+            Forget Password?
+        </a>
+          
+          <!-- Modal -->
+          <div class="modal fade " id="exampleModalFB" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Forget Password</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="alert alert-success goodEmailReset" role="alert">
+                    Check Your Email...
+                  </div>
+                  <div class="alert alert-danger badEmailReset" role="alert">
+                    This Email Is Not Valid...
+                  </div>
+                          <input type="email" class="form-control resetemail" aria-describedby="emailHelp" placeholder="Enter email">
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary forgetPassSendBtn">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+                <!------------------end forget password---------------------->
+      </div>
+    
+      <button name="signInBtn" class="btn btnLoginForm signBtn btn-block">SIGN IN</button>
+        <div class="donthave">
+          You Don't Have Account ?<a href= "signup.html" name="signUpBtnInIn" class="signUpBtnInIn"> SIGN UP</a>
+        </div>
+       
+    </form>
+  </div>
+    </div>
+  </div>
+   <!--  JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--custom login&signup JS-->
+    <script src="js/login.js"></script>
+
+
+</body>
+
+</html>

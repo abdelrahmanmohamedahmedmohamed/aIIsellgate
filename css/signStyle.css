@@ -1,0 +1,159 @@
+/***************for all****************/
+
+:root {
+  --first-color: #4EA1D3;
+  --sec-color: #F05067;
+  --black-color: black;
+  --gray-color: #333;
+  --lightGray-color: #999;
+  --veryLightGray-color: #EBEEFB;
+  --white-color: white;
+  --zety-color: #F7F1E3;
+}
+
+/**************start sign form**************/
+
+.sign-form label{
+color:var(--gray-color);
+  }
+  .sign-form input{
+border-radius: 0;
+      }
+
+.sign-form .header-form h2{
+  margin-bottom:-1px;
+  font-weight: bold;
+  }
+.sign-form .header-form span{
+  font-size: 14px;
+ color:var(--gray-color) ;
+  }
+
+.forget-pass{
+  text-decoration: none;
+  color:var(--black-color);
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.donthave{
+  text-align: center;
+  padding: 10px;
+  color:var(--gray-color)
+}
+.donthave a{
+font-weight: bold;
+}
+.signUpBtnInIn{
+color:var(--gray-color)
+}
+/**************end sign form**************/
+/*****************start or div***************/
+.div-or{
+
+margin:1px  auto 15px;
+text-align: center;
+}
+
+/***************** end or div***************/
+/***************************start sign with*********************/
+.signWith-form {
+  margin: auto ;
+}
+
+.signWithBtn{
+margin-bottom: 10px;
+border: 1px solid var(--lightGray-color);
+background: none;
+
+}
+.firstFormw button i{
+  margin-right:3px;
+  font-size: 20px;
+}
+.signWith-form:last-of-type button i{
+  margin-right:6px;
+  font-size: 20px;
+ }
+/***************************end sign with*********************/
+/***************************start virefcation div*********************/
+.vervication-Div{
+margin: 15px 0;
+padding: 20px 10px;
+display: flex;
+justify-content: space-around;
+}
+.vervication-Div input{
+border: 1px solid var(--lightGray-color);
+padding: 6px;
+margin: 5px;
+}
+/***************************end virefcation div*********************/
+/*****additonal*******/
+
+.sign-form{
+margin: 95px auto 5px;
+background-color: var(--white-color);
+border-radius: 3px;
+padding-bottom: 15px;
+
+/*box-shadow: 1px 1px 10px 5px #888888;*/
+}
+.alert{
+  width:100% !important;
+  margin:2px !important;
+
+}
+
+.mainErrorMessage2,.loginSuccessMsg, .loginerrorMsgAlExist ,
+.loginerrorMsgNotExist ,.mainErrorMessage,
+.loginerrorMsgNotExist2 ,.loginerrorMsgAlExist2,.loginSuccessMsg2{
+  margin: 7px 1px 13px 1px !important ;
+  display: none;  
+}
+.goodEmailReset,.badEmailReset{
+  margin: 10px 5px;
+  width: 100%;
+  display: none;
+}
+.loginParent {
+  background: url('../images/backecomm.svg') center center/cover;
+  height:100vh;
+  /*background-color: var(--sec-color);*/
+  padding: 10px;
+}
+.signUpParent {
+  background: url('../images/backecomm.svg') center center/cover;
+  height:100vh;
+  /*background-color: var(--sec-color);*/
+  padding: 10px;
+}
+.welcomeW{
+  display: block;
+  text-align: center;
+
+}
+.signBtn{
+  background-color: var(--sec-color);
+  color: white;
+  border-radius: 0;
+  font-weight: bold;
+ 
+}
+.signword{
+ /*background-color: white;*/
+  font-weight: bold;
+  padding: 6px;
+  margin: auto;
+  color: var(--gray-color);
+ text-align: center;
+ margin-top:-50px;
+}
+.signLogo{
+  height: 85px;
+  width: 205px;
+  display: block;
+margin:auto;
+margin-top: 10px;
+}

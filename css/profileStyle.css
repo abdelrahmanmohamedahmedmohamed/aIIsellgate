@@ -1,0 +1,275 @@
+/***************for all****************/
+
+:root {
+    --first-color: #4EA1D3;
+    --sec-color: #F53163;
+    --black-color: black;
+    --gray-color: #333;
+    --lightGray-color: #999;
+    --veryLightGray-color: #EBEEFB;
+    --white-color: white;
+    --zety-color: #F7F1E3;
+}
+
+
+/********************profile header*******************/
+
+.mainProfileHeader {
+    padding: 10px;
+}
+
+.mainCoverProfileHeader {
+    height: 350px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: url('../images/vendorHeader.png') center center/cover;
+    border-radius: 10px;
+}
+
+.mainPhotoProfileHeader {
+    border: 2px solid var(--white-color);
+    border-radius: 50%;
+    height: 123px;
+    width: 125px;
+    position: absolute;
+    bottom: -45px;
+    background-color: var(--veryLightGray-color);
+   
+}
+.forimageuserPolits{
+    position: relative;
+    
+}
+.settingProImageBtn{
+    position: absolute;
+    right: 0;  
+    border: 2px solid var(--gray-color);
+    padding: 6px 15px 5px 15px;
+    background-color:var(--white-color);
+    color:var(--gray-color);
+    border-radius: 50%;
+}
+.mainPhotoProfileHeader img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profileNameU {
+    text-align: center;
+    margin-top: 45px;
+    padding: 10px 3px 5px 3px;
+}
+
+.anotherProfileInfo {
+    text-align: center;
+    color: var(--lightGray-color);
+}
+
+.anotherProfileInfo .fa-circle {
+    font-size: 5px;
+}
+
+.profileStarsU {
+    padding: 0px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.TrustedOrNo i {
+    color: var(--sec-color)
+}
+
+.mainProfileSubsc {
+    text-align: center;
+    padding: 15px;
+}
+
+.profileSubsc {
+    padding: 10px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.profileSubsc i {
+    color: var(--sec-color);
+    font-size: 18px;
+}
+
+.profileEmail{
+    color:var(--gray-color);
+    font-weight:bold;
+    display:block !important;
+    margin-top:6px !important;
+}
+/************************media query for this section*******************/
+
+@media (max-width:600px) {
+    .mainCoverProfileHeader {
+        height: 200px;
+    }
+    .mainPhotoProfileHeader {
+        height: 85px;
+        width: 86.5px;
+    }
+    .profileAddressU {
+        display: block;
+        padding-bottom: 8px;
+    }
+    .profileStarsU {
+        display: block;
+        font-size: 15px;
+    }
+    .TrustedOrNo {
+        display: block;
+    }
+}
+
+
+/*****************section search & items for sale******************/
+
+.mainSearchForAnotherThing {
+    margin-bottom: 10px;
+}
+
+.mainSearchForAnotherThing {
+    padding: 3px;
+}
+
+.mainSearchForAnotherThing form {
+    position: relative;
+    ;
+}
+
+.mainSearchForAnotherThing form button {
+    position: absolute;
+    right: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 5px;
+    color: var(--lightGray-color);
+}
+
+.mainSearchForAnotherThing form input {
+    width: 100%;
+    border: 1px solid var(--lightGray-color);
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.mainItemsForSale {
+    padding: 3px;
+    max-height: 1290px;
+    overflow: hidden;
+}
+
+.headerMainItemsForSale {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.headerMainItemsForSale span {
+    font-size: 15px;
+    color: var(--lightGray-color);
+    font-weight: bold;
+}
+
+.itemForSale {
+    padding: 5px;
+    margin-bottom: 6px;
+    position: relative;
+}
+.settingProfBtn{
+    position: absolute;
+    margin-top: -10px;
+    border: 2px solid var(--gray-color);
+    right: 0;
+    padding: 6px 15px 5px 15px;
+    background-color:gold;
+    color:var(--gray-color);
+    border-radius: 50%;
+}
+.mainItemForSalePhoto {
+    width: 100%;
+    height: 150px;
+    display: block;
+  
+}
+
+.mainItemForSalePhoto img {
+    width: 100%;
+    height: 100%
+}
+
+.itemForSaleP {
+    max-height: 50px;
+    overflow: hidden;
+    display: block;
+    color: black;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+
+.itemForSaleP:hover {
+    text-decoration: none;
+}
+
+.itemForSalePrice {
+    color: var(--first-color);
+    font-weight: bold;
+}
+
+.mainBtnSeeMoreIFs {
+    padding: 10px;
+    text-align: center;
+}
+
+.BtnSeeMoreIFs {
+    border: 0;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+}
+
+
+/************************media query for this section*******************/
+
+@media (max-width:760px) {
+    .mainItemForSalePhoto {
+        height: 220px;
+    }
+}
+/*************************/
+.ErrorCommntSho{
+    width:100%;
+    text-align: center;
+}
+/*********/
+.TableTitle{
+    text-align: center;
+    padding: 5px;
+ margin: 7px;
+
+}
+.acceptTable{
+    margin: 5px;
+}
+.acceptTable .acceptTableCont{
+    overflow-x: scroll;
+   
+}
+.acceptTableTbodyPhoto{
+    height: 60px;
+    width: 70px;
+}
+.dropTop{
+    z-index:400000;
+}

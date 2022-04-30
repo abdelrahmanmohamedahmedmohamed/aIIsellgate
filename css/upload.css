@@ -1,0 +1,86 @@
+/***************for all****************/
+
+:root {
+    --first-color: #4EA1D3;
+    --sec-color: #F53163;
+    --black-color: black;
+    --gray-color: #333;
+    --lightGray-color: #999;
+    --veryLightGray-color: #EBEEFB;
+    --white-color: white;
+    --zety-color: #F7F1E3;
+}
+/**********upload style********/
+.image_container {
+    height: 120px;
+    width: 200px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 10px;
+}
+.image_container img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+.image_container span {
+    top: -6px;
+    right: 8px;
+    color: red;
+    font-size: 28px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.headerUpload{
+    padding: 10px;
+    text-align: center;
+    border: 2px solid var(--gray-color);
+    margin-top: 15px;
+    background-color: var(--white-color);
+}
+.uploadParent{
+    background: url('../images/back-prof.svg') center center/cover;
+}
+.uploadParent input{
+ border-radius: 0;   
+}
+.uploadmain{
+    position: relative;
+}
+.errorUploadMsg,.successUploadMsg{
+position: fixed;
+padding: 20px;
+width: 70%;
+text-align: center;
+z-index: 100000;
+}
+.successUploadMsg{
+   top:50;
+   display: none;
+    }
+    .errorUploadMsg{
+        top:150;
+           display: none;
+         }
+.formUpload{
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+fieldset{
+    border: 1px solid var(--lightGray-color);
+    padding: 26px;
+    margin: 20px 0;
+    background-color: var(--white-color);
+}
+fieldset legend{
+    border: 1px solid var(--lightGray-color);
+    padding: 5px;
+    text-align: center;
+    background-color: var(--white-color);
+}
+/*********JS Map***********/
+#map{
+  height:500px;
+  width: 100%;
+ border-radius: 6px; 
+}

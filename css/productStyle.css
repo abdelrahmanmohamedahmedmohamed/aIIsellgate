@@ -1,0 +1,986 @@
+/***************for all****************/
+
+:root {
+    --first-color: #4EA1D3;
+    --sec-color: #F53163;
+    --black-color: black;
+    --gray-color: #333;
+    --lightGray-color: #999;
+    --veryLightGray-color: #EBEEFB;
+    --white-color: white;
+    --zety-color: #F7F1E3;
+}
+
+.active1 {
+    background-color: var(--zety-color);
+}
+
+.theGeneralButtonStyle {
+    border: 0;
+    background-color: var(--first-color);
+    color: white;
+    border-radius: 15px;
+    padding: 3px 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/*************product image slider & another in header section***************/
+
+.productImageSliderAAddAShareAA {
+    background-color: var(--white-color);
+    padding: 10px;
+}
+
+.img-showcase {
+    border-radius: 3px;
+}
+
+.img-showcase img {
+    border-radius: 3px;
+}
+
+.img-item {
+    height: 60px;
+    border: 1px solid var(--lightGray-color);
+    border-radius: 3px;
+}
+
+.img-item img {
+    height: 100%;
+    border-radius: 3px;
+}
+
+.productInfoName {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.mainBrandName {
+    padding: 3px;
+}
+
+.mainBrandName .brandName {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.mainCatNameH {
+    padding: 3px;
+}
+
+.mainCatNameH .catNameH {
+    padding: 5px;
+    font-weight: bold;
+}
+.mainDetail1 {
+    padding: 3px;
+}
+
+.mainDetail1 .detail1 {
+    padding: 5px;
+    font-weight: bold;
+}
+.mainDetail2 {
+    padding: 3px;
+}
+
+.mainDetail2 .detail2 {
+    padding: 5px;
+    font-weight: bold;
+}
+.mainDetail3 {
+    padding: 3px;
+}
+
+.mainDetail3 .detail3 {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.mainProStaARAA {
+    padding: 5px;
+}
+
+.mainTheProRat {
+    display: inline-block;
+}
+
+.TSAa {
+    color: gold;
+}
+
+.theProRat {
+    padding: 1px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.wordRating {
+    padding-right: 20px;
+}
+
+.mainAnsQues {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.mainAnsQues {
+    display: inline-block;
+}
+
+.theNumAnsQues {
+    padding: 1px;
+}
+
+.mainProductDescription {
+    padding: 5px;
+}
+
+.productDescriptionHeader {
+    padding: 4px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.productDescription {
+    padding: 4px;
+}
+
+
+/*******************special offer sec********************/
+
+.specialOfferSec {
+    padding: 10px;
+}
+
+.specialOfferSecHeader {
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.specialOfferSecHeader button {
+    font-weight: bold;
+}
+
+.specialOfferSecHeader button i {
+    font-size: 12px;
+    color: gold;
+}
+
+.mainSpecialOfferComp {
+    padding: 10px;
+}
+
+.mainSpecialOfferComp img {
+    width: 90px;
+    height: 65px;
+    display: inline-block;
+    padding: 7px;
+}
+
+.mainSpecialOfferComp i {
+    font-size: 23px;
+    display: inline-block;
+    padding: 5px 7px;
+}
+
+.SpecialOfferCompResult {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px 7px;
+}
+
+.shareAAddABuyAAnother {
+    padding: 10px;
+    text-align: center;
+}
+
+.sharebtns {
+    font-weight: bold;
+    padding: 8px;
+}
+
+.sharebtns i {
+    padding: 2px;
+    font-size: 20px;
+}
+
+.sharebtns i:nth-of-type(2) {
+    color: #2C5195;
+}
+
+.sharebtns i:nth-of-type(3) {
+    color: #339EE1;
+}
+
+.addCartSec {
+    border: 1px solid var(--lightGray-color);
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.mainProductPrice {
+    padding: 6px 1px 7px 1px;
+    color: var(--sec-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mainFreeDelivary {
+    padding: 7px;
+}
+
+.mainFreeDelivary span {
+    font-weight: bold;
+}
+
+.mainArivelDate {
+    margin: 6px 1px 2px 1px;
+}
+
+.ArivelDateT,
+.DaysWord {
+    font-weight: bold;
+}
+
+.inStockWord {
+    color: green;
+    font-weight: bold;
+}
+
+.quntatyNum {
+    font-weight: bold;
+}
+
+.quntatyNum select {
+    cursor: pointer;
+    padding: 1px 5px;
+}
+
+.mainAddToCartBtn {
+    padding: 10px;
+}
+
+.mainAddToCartBtn button {
+    width: 100%;
+    font-weight: bold;
+    padding: 6px 18px;
+}
+
+.mainBuyNowBtn {
+    padding: 5px 10px 15px 10px;
+}
+
+.mainBuyNowBtn button {
+    width: 100%;
+    font-weight: bold;
+    padding: 6px 18px;
+    border: 1px solid var(--first-color);
+    background-color: var(--veryLightGray-color);
+    color: var(--black-color);
+}
+
+.mainMakeOfferBtn {
+    padding: 15px 10px;
+}
+
+.mainMakeOfferBtn button {
+    width: 100%;
+    font-weight: bold;
+    padding: 6px 18px;
+    border-radius: 2px;
+}
+
+.mainReturnPolicySec {
+    padding: 22px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    border-top: 1px solid var(--lightGray-color);
+    margin-top: 20px;
+}
+
+.mainsallerInfoSec {
+    padding: 10px;
+    border: 1px solid var(--lightGray-color);
+    border-radius: 2px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.headerSallerInfoSec {
+    padding: 6px;
+    font-weight: bold;
+}
+
+.sallerInfoNameASt {
+    padding: 6px;
+    font-weight: bold;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.sallerInfoNameASt span {
+    color: var(--first-color);
+}
+
+.sallerInfoNameASt i {
+    color: gold;
+}
+.sallerInfoNamePic{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    border: 1px solid var(--lightGray-color);
+    margin-right:6px
+   
+}
+.sallerInfoNamePic img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+}
+.sallerInfoName{
+    display:block;
+    margin-top:3px
+}
+.vendorlocation {
+    padding: 3px;
+    font-weight: bold;
+}
+
+.mainStartCompareBtn {
+    padding: 10px;
+}
+
+.mainStartCompareBtn button {
+    width: 100%;
+    font-weight: bold;
+    padding: 6px 18px;
+    font-size: 17px;
+}
+
+
+/*************media query of this section*****************/
+
+@media (max-width: 1200px) {
+    .img-item {
+        height: 42px;
+    }
+}
+
+@media (max-width: 408px) {
+    .img-item {
+        height: 27px;
+    }
+    .productInfoName {
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 17px;
+    }
+}
+
+
+/*************anotherItems section***************/
+
+.mainAnotherItems {
+    background-color: var(--white-color);
+    border-bottom: 1px solid var(--lightGray-color);
+}
+
+.headerMainAnotherItems {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.anotherItem {
+    padding: 10px;
+    margin-bottom: 7px;
+}
+
+.anotherItemImg {
+    max-height: 270px;
+    width: 215px;
+    margin: 7px;
+    min-height: 180px;
+}
+
+.anotherItemImg img {
+    width: 100%;
+}
+
+.anotherItem a {
+    display: block;
+    text-decoration: none;
+}
+
+.anotherItem a.anotherItemMainText {
+    color: var(--first-color);
+    margin: 8px;
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.anotherItem a:hover {
+    display: block;
+    font-weight: bold;
+}
+
+.anotherItemOwner {
+    display: flex;
+    flex-direction: row;
+    color: var(--sec-color)
+}
+
+.anotherItemOwner .imgOwnerInAnother i {
+    font-size: 28px;
+    margin-top: 12px;
+}
+
+.infoOwnerInAnother {
+    margin: 7px;
+    font-size: 12px;
+}
+
+.anotherItemStars {
+    margin: 5px;
+}
+
+.anotherItemPrice {
+    margin: 5px;
+}
+
+.anotherItemPrice span {
+    font-weight: bold;
+}
+
+
+/*************Compare with similar items section***************/
+
+.headerMainCompareItems {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: capitalize;
+    color: var(--sec-color);
+}
+
+.mainCompareItems {
+    background-color: var(--white-color);
+    padding: 10px;
+}
+
+.mainCompareTable {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.tableComperedChossed a {
+    display: block;
+    text-decoration: none;
+}
+
+.compareItemImg {
+    max-height: 270px;
+    width: 215px;
+    margin: 7px;
+    min-height: 180px;
+}
+
+.compareItemImg img {
+    width: 100%;
+}
+
+.mainCompareTable td {
+    padding: 5px;
+}
+
+.compareByTable {
+    font-size: 12px;
+}
+
+.compareByTable td {
+    display: inline-block;
+    width: 250px;
+}
+
+.compareByTable tr:first-of-type {
+    height: 408px;
+}
+
+.tableComperedChossed tr:first-of-type {
+    min-height: 408px;
+    max-height: 408px;
+}
+
+.tableComperedChossed {
+    width: 260px;
+    font-size: 12px;
+}
+
+.compareItemMainText {
+    color: var(--first-color);
+    margin: 8px;
+    max-height: 150px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.tableComperedChossed button {
+    cursor: pointer;
+    border: 0;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    padding: 7px 12px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 7px;
+}
+
+
+/*****************Related To Items You Viewed & slick slider section****************/
+
+.browsingHistory {
+    padding: 10px;
+    background-color: var(--white-color);
+}
+
+.mainSliderImg {
+    height: 230px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--white-color);
+}
+
+.SliderImg {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.slick-arrow {
+    z-index: 100000000 !important;
+}
+
+.slick-arrow::before {
+    background-color: var(--black-color) !important;
+    border-radius: 35px;
+    font-size: 30px;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+
+/**************Customer questions & answers section***********************/
+
+.customerQuesAAns {
+    background-color: var(--white-color);
+    padding: 10px;
+}
+
+.mainVoteAVerQuesAAnsAWrite {
+    border-bottom: 1px solid var(--lightGray-color);
+    display: flex;
+    text-transform: capitalize;
+    flex-wrap: wrap;
+}
+
+.haveQuesAsearch {
+    padding: 10px;
+}
+
+.haveQuesAsearch form {
+    position: relative;
+}
+
+.haveQuesAsearch form button {
+    position: absolute;
+    left: 1px;
+    top: 3px;
+    border: 0;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.haveQuesAsearch form input {
+    width: 100%;
+    padding: 2px 2px 2px 27px;
+}
+
+.mainVoting {
+    text-align: center;
+    padding: 2px 2px 2px 30px;
+}
+
+.VerQuesAAns div {
+    padding: 2px;
+}
+
+.voteArrow {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.theVerQues {
+    color: var(--first-color);
+}
+
+.voteNum,
+.capVotes {
+    border-right: 2px solid var(--lightGray-color);
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.VerQuesAAns {
+    padding: 30px 15px 10px 15px;
+}
+
+.writeQuesButton {
+    padding: 40px 30px 30px 30px;
+    display: flex;
+    justify-content: flex-end;
+    width: 62%;
+}
+
+.theQues {
+    display: inline-block;
+}
+
+.mainReviews {
+    padding: 10px;
+    border-bottom: 1px solid var(--lightGray-color);
+}
+
+.mainNumRevGeneral {
+    padding: 5px;
+}
+
+.mainNumRevGeneral span {
+    padding: 5px;
+}
+
+.mainNumRevItem {
+    padding: 5px;
+}
+
+.mainNumRevItem span {
+    padding: 5px;
+    display: inline-block;
+}
+
+.numRevItem {
+    background-color: var(--lightGray-color);
+    border-radius: 10px;
+}
+
+.mainSortBy {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px;
+}
+
+.mainSortBy label {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.mainSortBy select {
+    font-size: 14px;
+    color: var(--lightGray-color);
+    border: 0;
+    cursor: pointer;
+}
+.newmainparentTwoComm{
+    border: 3px solid var(--zety-color);
+padding: 5px;
+    border-radius: 4px 4px  4px 4px ;  
+    
+}
+.CustReviewsArea {
+    background: var(--zety-color);
+    max-height: 400px;
+    overflow-y: scroll;
+    /*border-bottom: 1px solid var(--lightGray-color);*/
+}
+.CustReviewsArea::-webkit-scrollbar {
+    width: 15px;    
+            /* width of the entire scrollbar */
+  }
+  
+  .CustReviewsArea::-webkit-scrollbar-track {
+    background:var(--zety-color); 
+     /* color of the tracking area */
+  }
+  
+  .CustReviewsArea::-webkit-scrollbar-thumb {
+    background-color: orange;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid orange;  /* creates padding around scroll thumb */
+    height: 100px;
+  }
+.CustReview {
+    border: 1px solid var(--veryLightGray-color);
+    padding: 5px;
+    margin: 6px 3px;
+    border-radius: 4px 4px  4px 4px ;
+    background-color: var(--white-color);
+   
+}
+.ErrorCommntSho{
+  text-align: center;
+  width: 100%;  
+}
+.CustReviewInfoPhoto {
+    margin-bottom: 8px;
+    margin: auto;
+    height: 51px;
+    width: 53px;
+    border-radius: 50%;
+    border:2px solid var(--zety-color);
+  
+}
+
+.CustReviewInfoPhoto img {
+  
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+display: block;
+}
+
+.CustReviewInfoAll {
+    margin-top: 10px;
+    text-align: center;
+
+   
+}
+
+.CustReviewInfoN {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.CustReviewInfoD {
+    font-size: 14px;
+    color: var(--lightGray-color);
+}
+
+.CustReviewLikes i {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.CustReviewText {
+    padding:6px;
+  
+
+}
+/*@media (max-width: 650px) {
+    .CustReviewText {
+ 
+    min-width:150px;
+    
+    }
+}*/
+.mainCustMakeCommentAReview {
+    padding: 5px;
+}
+
+.headerMainCustMakeCommentAReview {
+    padding: 4px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mainCustMakeCommentAReview label {
+    padding: 4px;
+}
+
+.mainChooseStarsC select {
+    border:0;
+    border: 1px solid var(--veryLightGray-color);
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: var(--gray-color);
+    cursor: pointer;
+}
+
+.commentStarS {
+    color: gold;
+}
+
+.CustReviewStars {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.CustReviewStarsALikes i {
+    color: gold;
+}
+.reviewtitle{
+    height: 200px !important;
+}
+
+
+/***********design templete web baneer / advertising image setion**************/
+
+.mainadvImg1 {
+    background-color: var(--white-color);
+}
+
+.advImg1 {
+    height: 370px;
+    width: 100%;
+}
+
+.advImg1 img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*************media query of this section*****************/
+
+@media (max-width: 995px) {
+    .advImg1 {
+        height: 270px;
+    }
+}
+
+@media (max-width: 770px) {
+    .advImg1 {
+        height: 170px;
+    }
+}
+
+@media (max-width: 490px) {
+    .advImg1 {
+        height: 130px;
+    }
+}
+
+@media (max-width: 330px) {
+    .advImg1 {
+        height: 90px;
+    }
+}
+
+
+/*****************************footer********************************/
+
+.bottomSignSec {
+    text-align: center;
+    background-color: var(--white-color);
+    padding: 7px;
+}
+
+.bottomSignSec div {
+    padding: 10px;
+}
+
+.bottomSign {
+    background-color: var(--first-color);
+    padding: 5px 70px;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+}
+
+.bottomSign:hover {
+    text-decoration: none;
+}
+
+.underFooter {
+    background-color: #F7F1E3;
+}
+
+.maintoTopBtn {
+    padding: 10px;
+    text-align: center;
+}
+
+.maintoTopBtn a {
+    font-weight: bold;
+    color: var(--sec-color)
+}
+
+.maintoTopBtn a:hover {
+    text-decoration: none;
+}
+
+.anotherInFooter {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.anotherInFooter img {
+    width: 125px;
+    height: 45px;
+    display: inline-block;
+}
+
+.websiteLang {
+    display: inline-block;
+}
+
+.anotherInFooter select {
+    padding: 1px 4px;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: none;
+    color: var(--gray-color);
+    cursor: pointer;
+}
+
+.allRightsRe {
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*********continue comments sec************/
+
+.errorMsg3 {
+    margin: 15px 2px 6px 6px 2px;
+    display: none;
+}
+
+.successMsg {
+    margin: 15px 2px 6px 6px 2px;
+    display: none;
+}
+/**********extra edited to all sections**********/
+.btnAddComment{
+    margin-top:7px;
+    font-weight: bold;
+    color: var(--white-color);
+}
+.mainDetail4{
+    margin-left:4px !important
+}
+.detail4{
+    font-weight:bold;
+ 
+}

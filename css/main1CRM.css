@@ -1,0 +1,163 @@
+        /**********for all****************/
+        
+         :root {
+            --first-color: #4EA1D3;
+            --sec-color: #F53163;
+            --black-color: black;
+            --gray-color: #333;
+            --lightGray-color: #999;
+            --veryLightGray-color: #EBEEFB;
+            --white-color: white;
+            --zety-color: #F7F1E3;
+        }
+        
+        .allCustBkB,
+        .CustDetBkB {
+            background-color: var(--zety-color);
+        }
+        /***************sec of generalHeader***************************/
+        
+        .generalHeader {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .generalHeader h1 {
+            /*border-bottom: 2px double var(--gray-color);*/
+            padding: 10px 2px;
+        }
+        
+        .generalHeader h1 i {
+            font-size: 35px;
+        }
+        /*****************allcustomers page style****************************/
+        /************sec of search and filter*******************/
+        
+        .generalTable {
+            overflow-x: scroll;
+            margin-top: 5px;
+            max-height: 900px;
+        }
+        
+        .mainSearchByAFilter {
+            padding: 10px 1px;
+        }
+        /****************table of users sec****************/
+        
+        .tableAllUsers tr:hover {
+            background-color: var(--veryLightGray-color);
+            cursor: pointer;
+        }
+        
+        .table {
+            position: relative;
+            background-color: white;
+        }
+        
+        .delBtn {
+            position: absolute;
+            right: 0;
+            margin-top: -43px;
+            margin-right: 5px;
+        }
+        /*****************customerdetails page style****************************/
+        /**********SECTION : number of  solded and purchased **********/
+        
+        .parentNumberOfSoldedAndPurchased {
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+        
+        .csps {
+            border: 2px solid var(--gray-color);
+            border-bottom: 0;
+            padding: 4px 10px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--lightGray-color);
+            background-color: var(--white-color);
+        }
+        
+        .csps:last-of-type {
+            border-left: 0;
+            margin-right: 20px;
+        }
+        
+        .cspsi {
+            display: block;
+            color: var(--black-color);
+        }
+        /*****************SECTION : main user details*********************/
+        
+        .mainUserDetails {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        
+        .parentUserDetails {
+            border: 2px solid var(--gray-color);
+            background-color: var(--white-color);
+        }
+        
+        .infoPart {
+            padding: 17px 5px;
+            font-weight: bold;
+        }
+        
+        .infoPart div {
+            padding: 10px;
+            border-bottom: 1px solid var(--lightGray-color)
+        }
+        
+        .infoPart div span {
+            font-weight: 500;
+        }
+        
+        .infoPartImg {
+            height: 140px;
+            width: 140px;
+            border: 2px solid var(--lightGray-color);
+            margin: 10px;
+        }
+        
+        .infoPartImg img {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .userDEmail {
+            color: var(--gray-color)
+        }
+        
+        .userDEmail:hover {
+            text-decoration: none;
+        }
+        
+        .errorsMsgD {
+            margin-top: 10px;
+        }
+        /***********************purchesd and solied Table*************************/
+        
+        .purASoliTables {
+            margin: 10px 2px;
+        }
+        
+        .purASoliTables h3 {
+            border-bottom: 2px solid var(--gray-color);
+            padding: 6px 3px;
+            background-color: var(--white-color);
+        }
+        
+        .purchesdTable,
+        .soldedTable,
+        .internalTable {
+            text-align: center;
+            overflow-x: scroll;
+            margin-top: 5px;
+        }
+        
+        .purASolidImg {
+            width: 50px;
+            height: 39px;
+        }

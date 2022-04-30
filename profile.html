@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Slick slider CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <!--Slick slider theme CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- Custom product image slider  CSS -->
+    <link rel="stylesheet" href="css/productImageSlider1Style.css">
+    <!-- Custom product  CSS -->
+    <link rel="stylesheet" href="css/productStyle.css">
+    <!-- Custom profile  CSS -->
+    <link rel="stylesheet" href="css/profileStyle.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
+</head>
+
+<body>
+
+    <!-------------------------------------------------------------------------->
+    <!-- SECTION : profile header -->
+    <!-------------------------------------------------------------------------->
+    <section class="mainProfileHeader ">
+        <div class="mainCoverProfileHeader">
+            <div class="mainPhotoProfileHeader">
+			<div class="forimageuserPolits">
+			<!--	<button type="button"class="settingProImageBtn"data-toggle="modal" data-target="#exampleModal2"><i class="fas fa-ellipsis-v"></i></button>-->
+				<!-- Modal -->
+				<!--<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+					<div class="modal-content">
+					  <div class="modal-header">
+			   
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					  </div>
+					  <div class="modal-body">
+						<form action="">
+							<label >Change Profile Photo</label>
+							<input type="file" ><br><br>
+							<button type="button" class="btn btn-primary" >Change</button>
+						  </form>
+						  
+					  </div>
+	
+					</div>
+				  </div>
+				</div>-->
+			</div>
+                <img src="images/face.jpg" alt="profile Image">
+            </div>
+        </div>
+        <h4 class="profileNameU">
+            waiting for name...
+        </h4>
+        <div class="anotherProfileInfo">
+
+            <span class="profileAddressU">
+                waiting for Address...
+            </span>
+             <a href = "mailto: abc@example.com"class="profileEmail">waiting for Email...</a>
+        </div>
+ 
+    </section>
+    <!-------------------------------------------------------------------------->
+    <!-- SECTION : items for sale -->
+    <!-------------------------------------------------------------------------->
+    <section class="mainSearchAItemsForSale">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class=" col-md-9">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control searchVendorProductField" placeholder="Search About Item..." aria-describedby="basic-addon2">
+						<div class="input-group-append">
+						  <button class="btn btn-warning searchVendorProductBtn" type="button"><i class="fas fa-search"></i></button>
+						</div>
+						<div class="input-group-append">
+							<button class="btn btn-primary allVendorProductBtn" type="button">All</button>
+						  </div>
+					  </div>
+                    <div class="container-fluid mainItemsForSale">
+                        <header class="headerMainItemsForSale">
+                            items for sale (<span class="numItemsFSa">0</span>)
+                        </header>
+                        <div class="row parentItemsForSale">
+                            <!--******************one item & from js*************-->
+                                No Items For Sales...
+                        </div>
+
+                    </div>
+                    <div class="mainBtnSeeMoreIFs">
+                        <button class="BtnSeeMoreIFs"><i class="fas fa-arrow-alt-circle-down"></i> See More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!---->
+<div class="acceptTable">
+	<div class="container acceptTableCont">
+		<h3 class="TableTitle"><i class="fas fa-check-circle"></i> Accept Table</h3>
+		<table class="table">
+			<thead class="thead-dark">
+			  <tr>
+				<th scope="col">product ID</th>
+				<th scope="col">photo </th>
+				<th scope="col">name</th>
+				<th scope="col">price</th>
+				<th scope="col">quantity</th>
+				<th scope="col"> total price</th>
+				<th scope="col">accept transaction</th>
+				<th scope="col"> label link</th>
+			  </tr>
+			</thead>
+			<tbody class="acceptTableTbody">
+			  <tr>
+				<th>1</th>
+				<td><img src="images/lab3.png" alt="image"class="acceptTableTbodyPhoto"></td>
+				<td>labtob Toshba</td>
+				<td>2000 USD</td>
+				<td>2</td>
+				<td>4000 USD</td>
+				<td><button type="button" class="btn btn-success"><i class="fas fa-check"></i></button></td>
+				<td><a href="#">See Label</a></td>
+			</tr>
+			<tr>
+				<th>2</th>
+				<td><img src="images/lab2.png" alt="image"class="acceptTableTbodyPhoto"></td>
+				<td>labtob dell</td>
+				<td>4000 USD</td>
+				<td>3</td>
+				<td>8000 USD</td>
+				<td><button type="button" class="btn btn-success"><i class="fas fa-check"></i></button></td>
+				<td><a href="#">See Label</a></td>
+			</tr>
+			<tr>
+				<th>3</th>
+				<td><img src="images/lab1.png" alt="image"class="acceptTableTbodyPhoto"></td>
+				<td>labtob samsung</td>
+				<td>6000 USD</td>
+				<td>6</td>
+				<td>12000 USD</td>
+				<td><button type="button" class="btn btn-success"><i class="fas fa-check"></i></button></td>
+				<td><a href="#">See Label</a></td>
+			</tr>
+			</tbody>
+		  </table>
+	</div>
+</div>
+<!---->
+    <!-------------------------------------------------------------------------->
+    <!-- SECTION :footer-->
+    <!-------------------------------------------------------------------------->
+   <footer class="bg3 p-t-75 p-b-32">
+		<div class="container">
+			<div class="row ">
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Categories
+					</h4>
+
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Women
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Men
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Shoes
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Watches
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Help
+					</h4>
+
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Track Order
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Returns 
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Shipping
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								FAQs
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						GET IN TOUCH
+					</h4>
+
+					<p class="stext-107 cl7 size-201">
+						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+					</p>
+
+					<div class="p-t-27">
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-facebook"></i>
+						</a>
+
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-instagram"></i>
+						</a>
+
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-pinterest-p"></i>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Newsletter
+					</h4>
+
+					<form>
+						<div class="wrap-input1 w-full p-b-4">
+							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
+							<div class="focus-input1 trans-04"></div>
+						</div>
+
+						<div class="p-t-18">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+								Subscribe
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="p-t-40">
+				<div class="flex-c-m flex-w p-b-18">
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+					</a>
+				</div>
+
+				<p class="stext-107 cl6 txt-center">
+				
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> By Sell Gate <i class="fa fa-heart-o" aria-hidden="true"></i> 
+
+
+				</p>
+			</div>
+		</div>
+	</footer>
+    <!--  JavaScript -->
+	<script src="js/main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--slick slider JS-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!--custom code of slick slider JS-->
+    <script src="js/productSlickSlider1.js"></script>
+    <!--custom product image slider JS-->
+    <script src="js/productImageSlider1.js"></script>
+
+    <!--custom profile JS-->
+    <script src="js/profileJs.js"></script>
+</body>
+
+</html>
