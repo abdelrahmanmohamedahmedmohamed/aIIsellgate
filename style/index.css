@@ -1,4 +1,26 @@
-
+tr.vendor-row.table_row {
+    height: 10px;
+}
+.table-shopping-cart .table_row .vendor-row td.column-1 {
+    padding-bottom: 0px !important;
+}
+td.vendor_column.column-1 {
+    padding: 1px 1px 1px 1px !important;
+    margin: 8px 1px 1px 8px !important;
+    font-size: smaller !important;
+    color: #fff;}
+td.vendor_column.column-2 {
+    padding: 0px !important;
+}
+td.vendor_column.column-3 {
+    padding: 0px !important;
+}
+td.vendor_column.column-4 {
+    padding: 0px !important;
+}
+td.vendor_column.column-5 {
+    padding: 5px !important;
+}
 /*
 .chat{
     margin-top: 250px;

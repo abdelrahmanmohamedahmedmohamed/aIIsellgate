@@ -1,6 +1,6 @@
 var baseUrl =
   "https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/";
-let enableDisabling = false;
+let enableDisabling = true;
 const getAddToCartButton = () => {
   let addToCartButton = document.querySelector(".addToCartBtn");
   return addToCartButton;

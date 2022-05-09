@@ -28,6 +28,8 @@
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="style/index.css">
+
 	<!--===============================================================================================-->
 </head>
 
@@ -359,7 +361,15 @@
 									<th class="column-4">Quantity</th>
 									<th class="column-5">Total</th>
 								</tr>
-
+								<tr class="vendor-row table_row">
+									<td class="vendor_column column-1 badge badge-info">Vendor Name : Ali</td>
+									<td class="vendor_column column-2"></td>
+									<td class="vendor_column column-3"></td>
+									<td class="vendor_column column-4"></td>
+									<td class="vendor_column column-5">
+										<button class="btn btn-success btn-sm rounded">checkout</button>
+									</td>
+								</tr>
 								<tr class="table_row">
 									<td class="column-1">
 										<div class="how-itemcart1">
@@ -383,31 +393,6 @@
 										</div>
 									</td>
 									<td class="column-5">$ 36.00</td>
-								</tr>
-
-								<tr class="table_row">
-									<td class="column-1">
-										<div class="how-itemcart1">
-											<img src="images/item-cart-05.jpg" alt="IMG">
-										</div>
-									</td>
-									<td class="column-2">Lightweight Jacket</td>
-									<td class="column-3">$ 16.00</td>
-									<td class="column-4">
-										<div class="wrap-num-product flex-w m-l-auto m-r-0">
-											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-minus"></i>
-											</div>
-
-											<input class="mtext-104 cl3 txt-center num-product" type="number"
-												name="num-product2" value="1">
-
-											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-plus"></i>
-											</div>
-										</div>
-									</td>
-									<td class="column-5">$ 16.00</td>
 								</tr>
 								
 							</table>
@@ -446,7 +431,7 @@
 							</div>
 
 							<div class="size-209">
-								<span class="mtext-110 cl2">
+								<span class="subtotal mtext-110 cl2">
 									$79.65
 								</span>
 							</div>
@@ -500,6 +485,8 @@
 							</div>
 						</div>
 
+						<div id="totals-holders">
+						</div>
 						<div class="flex-w flex-t p-t-27 p-b-33">
 							<div class="size-208">
 								<span class="mtext-101 cl2">
@@ -508,7 +495,7 @@
 							</div>
 
 							<div class="size-209 p-t-1">
-								<span class="mtext-110 cl2">
+								<span class="total mtext-110 cl2">
 									$79.65
 								</span>
 							</div>
@@ -722,7 +709,7 @@
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 	<script src="js/cart.js"></script>
-
+	<script src="js/checkout.js"></script>
 </body>
 
 </html>
