@@ -15,7 +15,6 @@ let removeTableStaticElements = () => {
   }
 };
 let addNewCost = (cost) => {
-  console.log(cost);
   return `<div class="flex-w flex-t p-t-27">
     <div class="size-208">
       <span class="mtext-101 cl2">
@@ -125,7 +124,7 @@ let createVendorRow = (element) => {
     id=${"select-shipping" + element.vendorid} 
     class="btn btn-success btn-sm rounded" onClick="goToShippingCompanies(${
       element.vendorid
-    })">checkout</button>` +
+    })">Choose Shipping</button>` +
     "</td>" +
     "</tr>";
 
