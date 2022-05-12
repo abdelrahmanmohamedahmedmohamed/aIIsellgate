@@ -26,7 +26,7 @@ if(email == ""||password == ""){
            
 
             function loginPostApi() {
-                const loginUrl = 'https://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/Login';
+                const loginUrl = 'https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Login';
 
                 let loginData = {
                     email: email,
@@ -99,7 +99,7 @@ if(email == ""||password == ""){
       
 
             function forgetEmailFunc() {
-                fetch(`http://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/resetpassword?email=${resetEmailValue}`)
+                fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/resetpassword?email=${resetEmailValue}`)
                     .then(
                         function(rresponse) { //(entire HTTP response)
                             return rresponse.json(); // to next then

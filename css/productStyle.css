@@ -984,3 +984,7 @@ display: block;
     font-weight:bold;
  
 }
+/********************/
+.text-recomend{
+    max-height: 50px;
+}

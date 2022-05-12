@@ -275,14 +275,14 @@ function displayComments() {
 /*********************sec of recommend*****************************/
 function getRecommend(){
 
-fetch(`http://127.0.0.1:8000/getrecomend/dc21247da0290904ffbbcd5953c76f95?id=${product.step_id}`).then((data)=>{
-    console.log("recmmoend:"+product.step_id);
+fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getrecommendMachine?id=${product.spe_id}`).then((data)=>{
+    console.log("recmmoend:"+product.spe_id);
     return data.json();
-}).then((completedata)=>{
+}).then((completedata1)=>{
     let data1="";
 
 
-    completedata.map((values)=>{
+    completedata1.reverse().map((values)=>{
         let imagesString22=values.images;
         let imagesArray22 = imagesString22.split("~");
         data1 +=
@@ -300,29 +300,18 @@ fetch(`http://127.0.0.1:8000/getrecomend/dc21247da0290904ffbbcd5953c76f95?id=${p
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product.html?proId=${values.id}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+								<a href="product.html?proId=${values.id}" class=" text-recomend stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 								${values.name}
 								</a>
 
 								
-                                <span class="stext-105 cl3">
-									${values.price} ${values.currency}
-								</span>
+                            
 
       
                             <span class="stext-105 cl3">
-                            <img src="	${values.image}" class="VendorImg rounded-circle z-depth-2"> ${values.fullname}								</span>
-                                                 <div class="mainProStaARAA">
-                            <span class="mainTheProRat">
-                            <span class="theProRat">	${values.rate}</span>  
-                            </span>
-                            <span class="theProSta">
-                            <i class="fas fa-star"></i>
-                
-                            </span>
-
-
-                            </div>
+								
+								</span>
+                    
                                                         </div>
 
 							<div class="block2-txt-child2 flex-r p-t-3">
@@ -341,13 +330,9 @@ fetch(`http://127.0.0.1:8000/getrecomend/dc21247da0290904ffbbcd5953c76f95?id=${p
      
 ` 
             });
-    document.getElementById("postsRow").innerHTML=data1;
+    document.getElementById("postsRecommend").innerHTML=data1;
 }).catch((err)=>{
     console.log(err);
 })
     
 }
-
-
-
-

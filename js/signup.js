@@ -23,7 +23,7 @@
               signupPostApi();
           }
           function signupPostApi() {
-              const signupUrl = 'https://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/register';
+              const signupUrl = 'https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/register';
   
               let signupData = {
                   email: SignUpEmail,

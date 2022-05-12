@@ -263,3 +263,130 @@ function displaygetSearchVendorProduct() {
     document.querySelector(".parentItemsForSale").innerHTML = getSearchVendorProductContainer;
 
 }
+/**************transactiontable************* */
+//getAllTransOrders  by  fetch get
+let AllTransOrders = [];
+
+let AllTransOrdersProducts = [];
+getAllTransOrders();
+
+function getAllTransOrders() {
+    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getTransaction?vendorid=${vendorIdP}`)
+        .then(
+            function(getAllTransOrdersresponses) { //(entire HTTP response)
+                return getAllTransOrdersresponses.json(); // to next then
+
+            }
+        ).then(
+            function(getAllTransOrdersdatas) {
+                AllTransOrders = getAllTransOrdersdatas; //the js array of obj / obj  json of api
+           
+                displayAllTransOrders();
+               
+            }
+        ).catch(
+            function(getAllTransOrderserrors) {
+                console.log("FETCH ERROR IS :" + getAllTransOrderserrors);
+            }
+        );
+}
+
+function displayAllTransOrders() {
+    let AllTransOrdersContainer = '';
+    let productsContT='';
+
+    for (let iao = 0; iao < AllTransOrders.length; iao++) {
+        let productsContT='';
+        AllTransOrdersProducts=AllTransOrders[iao].prudect;
+        console.log(AllTransOrdersProducts);
+        for (let iaoP = 0; iaoP < AllTransOrdersProducts.length; iaoP++) {
+            productsContT+= `
+        <div><a class=" dropdown-item" href="product.html?proId=${AllTransOrdersProducts[iaoP].prudect}">${"Product "+(iaoP+1)} <span><b>Qunity:</b> ${AllTransOrdersProducts[iaoP].qunity} </span><span><b>Color:</b> ${AllTransOrdersProducts[iaoP].color} </span></a></div>
+      `;
+    }
+    AllTransOrdersContainer += `
+        <tr>
+        <td>
+        <div class="dropdown show">
+  <a class="btn btn-info dropdown-toggle" href="#" role="button" id="${"dropdownMenuLink"+iao}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    All Products
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="${"dropdownMenuLink"+iao}">
+ ${productsContT}
+  </div>
+</div>
+      </td>
+  
+        <td>${AllTransOrders[iao].price} ${AllTransOrders[iao].currency}</td>
+
+<td class="acceptTD">
+<button class="btn btn-success"onclick="postAccept(${AllTransOrders[iao].id},${iao})">
+<i class="fas fa-check"></i></button>
+<span class="seelinkspanAlt"> Already Pressed</span>
+    <a class="seelinkspan" href="${AllTransOrders[iao].label}"> See Label</a>
+
+</td>
+
+        <td>${AllTransOrders[iao].order_purchase_timestamp}</td>
+
+ </tr>
+        `;
+
+
+    }
+    
+    document.getElementsByClassName("acceptTableTbody")[0].innerHTML = AllTransOrdersContainer;
+//ffff();
+}
+
+ /********accept trans btn********************* */
+let returnpostacceptdata={};
+     function postAccept(idOrderAccept,iaoVar) {
+        if(AllTransOrders[iaoVar].label==null){
+            console.log("null");
+       //   document.getElementsByClassName("seelinkspan")[iaoVar].style.display="no";
+            insideAccept();
+            
+            }else{
+                console.log("not null");
+                document.getElementsByClassName("seelinkspan")[iaoVar].style.display="inline";
+                document.getElementsByClassName("seelinkspanAlt")[iaoVar].style.display="inline";
+           
+            }
+function insideAccept(){
+         const url = 'http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/makeTransaction';
+ 
+         let postAcceptdata = {
+             id:idOrderAccept
+ 
+         }
+ 
+         let postAcceptfetchData = {
+             method: 'PUT',
+             body: JSON.stringify(postAcceptdata),
+             headers: new Headers({
+                 'Content-Type': 'application/json; charset=UTF-8'
+             })
+         }
+         fetch(url, postAcceptfetchData)
+             .then(
+                 function(postAcceptresponse) { //(entire HTTP response)
+                     return postAcceptresponse.json(); // to next then
+                 }
+             ).then(
+                 function(postAcceptdata) {
+                    
+                     returnpostacceptdata=postAcceptdata;
+                     console.log(returnpostacceptdata);
+                     if(returnpostacceptdata.state==1){
+                        document.location.reload();
+                     }
+ 
+                 }).catch(
+                 function(postAccepterror) {
+                     console.log("FETCH POST ERROR IS :" + postAccepterror);
+                 }
+             );
+     }
+    }

@@ -103,7 +103,7 @@ let createProduct = (element) => {
 };
 let goToShippingCompanies = (vendorid) => {
   console.log(vendorid);
-  window.location.href = `/shippingCompany.html?vendorid=${vendorid}`;
+  window.location.href = `shippingCompany.html?vendorid=${vendorid}`;
 };
 
 let createVendorRow = (element) => {

@@ -1,6 +1,6 @@
         /**********for all****************/
         
-         :root {
+        :root {
             --first-color: #4EA1D3;
             --sec-color: #F53163;
             --black-color: black;
@@ -12,9 +12,11 @@
         }
         
         .allCustBkB,
-        .CustDetBkB {
+        .CustDetBkB,
+        .allOrdBKg{
             background-color: var(--zety-color);
         }
+      
         /***************sec of generalHeader***************************/
         
         .generalHeader {
@@ -161,3 +163,46 @@
             width: 50px;
             height: 39px;
         }
+        /*****All Orders CRM Page**************/
+        .generalTableO {
+            overflow-x: scroll;
+            margin-top: 5px;
+            max-height: 900px;
+        }
+        .cirFlag,.fa-exclamation-circle{
+         
+            font-size: 20px;
+        }
+        /**********************/
+        .allordersHeader h1 span{
+           background-color: var(--white-color);
+           padding: 1px 10px 6px 10px;
+           border-bottom: 2px solid var(--lightGray-color);
+           border-top: 2px solid var(--lightGray-color);
+          /* border-radius: 5px 20px 5px 20px ;*/
+          border-radius: 4px;
+           
+        }
+        .OrdersBKg{
+        /*background: url('../images') center center/cover;*/
+      
+           background-color: var(--veryLightGray-color)
+        }
+        .generalTableorders{
+background-color: var(--white-color);
+
+padding:10px;
+border-radius: 5px  5px 10px 10px ;
+        }
+        .maska{
+            border:#e9e6e6;
+            height: 90vh;
+            background-color: var(--white-color);
+            padding: 16px 8px;
+            margin-top: 10px;
+            border-radius: 5px  5px 10px 10px ;
+         
+        }
+      
+
+    

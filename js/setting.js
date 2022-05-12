@@ -3,10 +3,11 @@ let comments = [];
 getComments();
 
 function getComments() {
-    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getLocation?id=1`)
+    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getLocation?id=1`)
     .then(
         function(getCommentsResponses) {
             return getCommentsResponses.json();
+            
         }
     ).then(
         function(getCommentsData) {
@@ -27,7 +28,7 @@ function displayComments() {
     for(var i =0; i<comments.length; i++){
         postsContanier += 
         `
-        <div class="card mt-3">
+        <div class="card anotherCard mt-3">
           <div class="card-body coverCard ">
           <h6 class="d-inline" >${comments[i].fullname}</h6>
           ,
@@ -38,8 +39,17 @@ function displayComments() {
         `;
         
     }
+
+
     document.getElementsByClassName("locationAPI")[0].innerHTML = postsContanier;
-    
+    for(var j =0; j<comments.length; j++){
+        if(comments[j].primary == 1)
+            {
+                document.getElementsByClassName("anotherCard")[j].style.border = "thick solid green";
+            }
+        
+        
+    }
 }
 
 
@@ -73,10 +83,10 @@ document.getElementsByClassName("btnPostLocation")[0].addEventListener("click",
             postAirline();
             function postAirline() {
                 const url = 'http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/PostLocation';
-        
+
                 let data = 
                     {
-                       id:localStorage.getItem("loginUserId"),
+                        id: 1,
                         fullname: inputfield1Value,
                         address: inputfield2Value,
                         city: inputfield3Value,
@@ -101,6 +111,12 @@ document.getElementsByClassName("btnPostLocation")[0].addEventListener("click",
                     ).then(
                         function(data2) {
                             console.log(data2);
+                            returnData = data2
+                            if (returnData.state == 1) {
+                                alert("success add location!")
+                            }
+                            else
+                                alert("Faild add location!")
                            
                         }).catch(
                         function(error2) {
