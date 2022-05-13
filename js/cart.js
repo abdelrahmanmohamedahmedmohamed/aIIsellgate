@@ -45,7 +45,6 @@ let getCurrentCart = (isAddToCart = false) => {
     return;
   }
 
-  console.log(consts);
   fetch(`${consts.default.baseUrl}getcart?id=${user}`)
     .then((result) => {
       return result.json();
@@ -68,7 +67,6 @@ let getCurrentCart = (isAddToCart = false) => {
 };
 let populateProducts = (cart) => {
   let cartModal = getHeaderCartContent();
-  console.log(cart);
   let ulBegin = `<ul class="header-cart-wrapitem w-full">`;
   let li = `<li class="header-cart-item flex-w flex-t m-b-12">`;
   let img = `<div class="header-cart-item-img">`;
@@ -79,7 +77,6 @@ let populateProducts = (cart) => {
   let anchorEnd = `</a>`;
   let endSpan = `</span>`;
   cart.forEach((element) => {
-    console.log(element);
     let images = [];
     if (element.image !== undefined) images = element.image.split("~");
     let src = `<img src="${images[0]}" alt="IMG">`;
@@ -99,7 +96,6 @@ let populateProducts = (cart) => {
       endDiv +
       liEnd +
       ulEnd;
-    console.log(cartModal);
     cartModal.insertAdjacentHTML("afterbegin", data);
   });
   let headerCartTotal = document.querySelector(".header-cart-total");

@@ -29,7 +29,6 @@ ERROR
             }
         ).catch(
             function(userDetailsInfoError) {
-                console.log("FETCH ERROR IS :" + userDetailsInfoError);
             }
         );
 }
@@ -103,7 +102,6 @@ No Notes Exist
             }
         ).catch(
             function(getNotesError) {
-                console.log("FETCH ERROR IS :" + getNotesError);
             }
         );
 }

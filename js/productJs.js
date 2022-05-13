@@ -1,5 +1,4 @@
 //localStorage.removeItem('loginUserId');
-console.log("userLast AFTER Delete :" + localStorage.getItem("loginUserId"));
 let productInfoName = document.querySelector(".productInfoName");
 let catNameH = document.getElementsByClassName("catNameH")[0];
 let detail1 = document.getElementsByClassName("detail1")[0];
@@ -38,7 +37,6 @@ function getProduct() {
             }
         ).catch(
             function(productError) {
-                console.log("FETCH ERROR IS :" + productError);
             }
         );
 }
@@ -191,7 +189,6 @@ document.getElementsByClassName("btnAddComment")[0].onclick = () => {
                         }
                     }).catch(
                     function(commentError) {
-                        console.log("FETCH POST ERROR IS :" + commentError);
                         errorMsg3.style.display = "inherit";
                         successMsg.style.display = "none";
                     }
@@ -213,7 +210,6 @@ function getComments() {
         ).then(
             function(getCommentsData) {
                 comments = getCommentsData;
-                console.log(getCommentsData);
                 if(comments.length==0){
                     document.getElementsByClassName("CustReviewsArea")[0].innerHTML =
                     `<div class="alert alert-warning ErrorCommntSho" role="alert">
@@ -226,7 +222,6 @@ function getComments() {
             }
         ).catch(
             function(getCommentsError) {
-                console.log("FETCH ERROR IS :" + getCommentsError);
             }
         );
 }
@@ -237,7 +232,6 @@ function displayComments() {
     for (var c = 0; c < comments.length; c++) {
         var commentsStarsContainer = "";
         for (var rateN = 0; rateN < comments[c].comments.rate; rateN++) {
-            console.log(comments[c].comments.rate);
             commentsStarsContainer+=`  <i class="fas fa-star"></i>`;
         }
         commentsContainer +=
@@ -276,7 +270,6 @@ function displayComments() {
 function getRecommend(){
 
 fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getrecommendMachine?id=${product.spe_id}`).then((data)=>{
-    console.log("recmmoend:"+product.spe_id);
     return data.json();
 }).then((completedata1)=>{
     let data1="";
@@ -332,7 +325,6 @@ fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getre
             });
     document.getElementById("postsRecommend").innerHTML=data1;
 }).catch((err)=>{
-    console.log(err);
 })
     
 }

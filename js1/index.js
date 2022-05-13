@@ -14,7 +14,6 @@ let getComments = () => {
       displayComments();
     })
     .catch(function (getCommentsError) {
-      console.log("FETCH ERROR IS :" + getCommentsError);
     });
 };
 getComments();
@@ -23,7 +22,6 @@ let displayComments = () => {
   var postsContanier = "";
   for (var i = 0; i < comments.length; i++) {
     let iterate = comments[i];
-    console.log(iterate);
     postsContanier += `
         <div class="card mt-3">
           <div class="card-body coverCard ">
@@ -64,7 +62,6 @@ window.changeToDefaultAddress = (id) => {
     })
     .then(function (result) {
       if ("error" in result) return;
-      console.log(result);
       comments.map((a) => (a.primary = 0));
       comments.forEach((iterate) => {
         if (iterate.id == id) {
@@ -120,10 +117,8 @@ document
           return response2.json(); // to next then
         })
         .then(function (data2) {
-          console.log(data2);
         })
         .catch(function (error2) {
-          console.log("FETCH POST ERROR IS :" + error2);
         });
     }
   });

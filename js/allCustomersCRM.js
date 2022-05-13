@@ -68,7 +68,6 @@ function selectFilterFunc(elem) {
                 }
             ).catch(
                 function(getFilterUsersError) {
-                    console.log("FETCH ERROR IS :" + getFilterUsersError);
                 }
             );
     }
@@ -113,7 +112,6 @@ function getAllUsers() {
             }
         ).catch(
             function(getAllUsersError) {
-                console.log("FETCH ERROR IS :" + getAllUsersError);
             }
         );
 }
@@ -183,7 +181,6 @@ User Not Exist
                     }
                 ).catch(
                     function(getSearchIdError) {
-                        console.log("FETCH ERROR IS :" + getSearchIdError);
                     }
                 );
         }
@@ -250,7 +247,6 @@ User Not Exist
                     }
                 ).catch(
                     function(getSearchEmailError) {
-                        console.log("FETCH ERROR IS :" + getSearchEmailError);
                     }
                 );
         }
@@ -318,7 +314,6 @@ User Not Exist
                     }
                 ).catch(
                     function(getSearchNameError) {
-                        console.log("FETCH ERROR IS :" + getSearchNameError);
                     }
                 );
         }
@@ -353,7 +348,6 @@ function getDelete(idDeleted) {
     let data = {
         id: idDeleted
     }
-    console.log(idDeleted);
     let fetchData = {
         method: 'PUT',
         body: JSON.stringify(data),
@@ -381,7 +375,6 @@ function getDelete(idDeleted) {
             }
         ).catch(
             function(getDeleteError) {
-                console.log("FETCH ERROR IS :" + getDeleteError);
             }
         );
 }

@@ -15,7 +15,6 @@ function getCatgorys() {
             }
         ).catch(
             function(getCatgorysErrors) {
-                console.log("FETCH ERROR IS :" + getCatgorysErrors);
             }
         );
 }
@@ -172,18 +171,11 @@ document.getElementsByClassName("successUploadMsg")[0].style.display="none";
                       }
                   ).then(
                       function(dataCloudinary) {
-                          console.log(dataCloudinary);
-
                           containerObj+=(JSON.stringify(dataCloudinary.url).replace('"', '')).slice(0, -1)+"~";
                           let objsString =containerObj;
                           let arrObjs = objsString.split("~");
                           if(arrObjs.length==images.length+1){
                             let allImagesUrls=containerObj.slice(0, -1);
-                          console.log(allImagesUrls);
-                          console.log("lat FINAL "+finalLat);
-                          console.log("lng FINAL"+finalLng);
-                          console.log(localStorage.getItem("loginUserId"));
-                          console.log("price : "+uProPrice);
                           postUploadAll(allImagesUrls,finalLat,
                             finalLng,uProName,uProDescription,uProCategory,
                             uProPrice,uProCurrency,uProBrand,uProColor,uProLength,uProHeight,
@@ -192,7 +184,6 @@ document.getElementsByClassName("successUploadMsg")[0].style.display="none";
                          
                       }).catch(
                       function(errorCloudinary) {
-                          console.log("FETCH POST ERROR IS :" + errorCloudinary);
                       }
                   );
                     }        
@@ -262,14 +253,12 @@ function postUploadAll(allImagesUrlsIn,flat,flng,uProName,uProDescription,uProCa
             }
         ).then(
             function(postUploadAllData) {
-                console.log(postUploadAllData);
                 document.location.reload();
                 document.getElementsByClassName("errorUploadMsg")[0].style.display="none";
 document.getElementsByClassName("errorUploadMsg")[0].textContent="The Value Of Field Is So Long... :(";
 document.getElementsByClassName("successUploadMsg")[0].style.display="inherit";
             }).catch(
             function(postUploadAllError) {
-                console.log("FETCH POST ERROR IS :" + postUploadAllError);
             }
         );
         }

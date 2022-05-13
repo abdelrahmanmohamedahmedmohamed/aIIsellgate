@@ -48,7 +48,6 @@ if(email == ""||password == ""){
                     ).then(
                         function(loginFinalResponse) {
                             loginObj = loginFinalResponse;
-                            console.log(loginObj);
                             if (loginObj.state == "1") {
                           let loginUserId =loginObj.id;
                           localStorage.setItem("loginUserId", loginUserId);
@@ -71,7 +70,6 @@ if(email == ""||password == ""){
                             }
                         }).catch(
                         function(loginError) {
-                            console.log("FETCH Login ERROR IS :" + loginError);
                         }
                     );
 
@@ -108,7 +106,6 @@ if(email == ""||password == ""){
                     ).then(
                         function(rdata) {
                             resetObj=rdata;
-                             console.log(rdata); //the js array of obj / obj  json of api
                        if(resetObj.state==1){
 goodEmailReset.style.display="inherit";
 badEmailReset.style.display="none";
@@ -120,7 +117,6 @@ badEmailReset.style.display="none";
                         }
                     ).catch(
                         function(rerror) {
-                            console.log("FETCH ERROR IS :" + rerror);
                         }
                     );
             }

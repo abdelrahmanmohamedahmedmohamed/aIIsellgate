@@ -46,7 +46,6 @@
                   ).then(
                       function(signupFinalResponse) {
                           signupObj = signupFinalResponse;
-                          console.log(signupObj);
                       if(signupObj.state == "1") {
                         loginSuccessMsg2.style.display = "inherit";
                         loginerrorMsgNotExist2.style.display = "none";
@@ -66,7 +65,6 @@
                           }
                       }).catch(
                       function(signupError) {
-                          console.log("FETCH Login ERROR IS :" + signupError);
                       }
                   );
   

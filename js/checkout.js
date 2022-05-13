@@ -102,7 +102,6 @@ let createProduct = (element) => {
   return data;
 };
 let goToShippingCompanies = (vendorid) => {
-  console.log(vendorid);
   window.location.href = `shippingCompany.html?vendorid=${vendorid}`;
 };
 
@@ -157,7 +156,6 @@ let generateShoppingCart = (bigCart) => {
       amounts = ups.reduce((accumulator, object) => {
         return parseFloat(accumulator) + parseFloat(object.amount);
       }, 0);
-      console.log(amounts);
     }
   }
   if (amounts === undefined) amounts = 0;

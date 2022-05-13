@@ -11,7 +11,6 @@ fetch(
     let li = `<thead><tr class=" text-black"><th scope="col">Name of Company</th><th scope="col">servicr</th><th scope="col">Currency</th><th scope="col">Price</th><th scope="col">duration</th><th scope="col">Status</th></tr></thead>`;
     // Loop through each data and add a table row
     json.forEach((user) => {
-      console.log(user);
       li += `<tbody>
              <tr>
              
@@ -38,7 +37,6 @@ let getUpsStorage = () => {
   return JSON.parse(localStorage.getItem("ups"));
 };
 let onClickApply = (upsId) => {
-  console.log(getQueryParamaters());
   let vendorId = parseInt(getQueryParamaters().vendorid);
   if (vendorId !== null) {
     let amount = upsList.find((a) => a.idRate === upsId).amount;

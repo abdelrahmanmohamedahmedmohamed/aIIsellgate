@@ -16,7 +16,6 @@ function getComments() {
         }
     ).catch(
         function(getCommentsError) {
-            console.log("FETCH ERROR IS :" + getCommentsError);
         }
     );
 }
@@ -110,7 +109,6 @@ document.getElementsByClassName("btnPostLocation")[0].addEventListener("click",
                         }
                     ).then(
                         function(data2) {
-                            console.log(data2);
                             returnData = data2
                             if (returnData.state == 1) {
                                 alert("success add location!")
@@ -120,7 +118,6 @@ document.getElementsByClassName("btnPostLocation")[0].addEventListener("click",
                            
                         }).catch(
                         function(error2) {
-                            console.log("FETCH POST ERROR IS :" + error2);
                         }
                     );
             }

@@ -16,7 +16,6 @@ function getComments() {
         }
     ).catch(
         function(getCommentsError) {
-            console.log("FETCH ERROR IS :" + getCommentsError);
         }
     );
 }

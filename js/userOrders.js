@@ -20,7 +20,6 @@ function getAllOrders() {
             }
         ).catch(
             function(getAllOrderserrors) {
-                console.log("FETCH ERROR IS :" + getAllOrderserrors);
             }
         );
 }
@@ -32,7 +31,6 @@ function displayAllOrders() {
     for (let iao = 0; iao < AllOrders.length; iao++) {
         let productsCont='';
         AllOrdersProducts=AllOrders[iao].prudect;
-        console.log(AllOrdersProducts);
         for (let iaoP = 0; iaoP < AllOrdersProducts.length; iaoP++) {
             productsCont+= `
         <div><a class=" dropdown-item" href="product.html?proId=${AllOrdersProducts[iaoP].prudect}">${"Product "+(iaoP+1)} <span><b>Qunity:</b> ${AllOrdersProducts[iaoP].qunity} </span><span><b>Color:</b> ${AllOrdersProducts[iaoP].color} </span></a></div>

@@ -81,12 +81,10 @@ function getProfileInfo() {
                         return deleteResponseAll.json()
                     })
                     .then(function (deleteDataAll){
-                   //console.log(deleteDataAll)
                    document.location.reload();
                     }
                     ).catch(
                         function(deleteErrorAll) {
-                            console.log("FETCH ERROR IS :" + deleteErrorAll);
                         }
                     );
                 }
@@ -103,7 +101,6 @@ function getProfileInfo() {
             }
         ).catch(
             function(profileError) {
-                console.log("FETCH ERROR IS :" + profileError);
             }
         );
 }
@@ -203,11 +200,8 @@ document.getElementsByClassName("searchVendorProductBtn")[0].addEventListener("c
      .then(deleteResponse => {
          return deleteResponse.json( )
      })
-     .then(deleteData => 
-    console.log(deleteData) 
-     ).catch(
+     .then(deleteData => {}).catch(
          function(deleteError) {
-             console.log("FETCH ERROR IS :" + deleteError);
          }
      );
  }
@@ -286,7 +280,6 @@ function getAllTransOrders() {
             }
         ).catch(
             function(getAllTransOrderserrors) {
-                console.log("FETCH ERROR IS :" + getAllTransOrderserrors);
             }
         );
 }
@@ -298,7 +291,6 @@ function displayAllTransOrders() {
     for (let iao = 0; iao < AllTransOrders.length; iao++) {
         let productsContT='';
         AllTransOrdersProducts=AllTransOrders[iao].prudect;
-        console.log(AllTransOrdersProducts);
         for (let iaoP = 0; iaoP < AllTransOrdersProducts.length; iaoP++) {
             productsContT+= `
         <div><a class=" dropdown-item" href="product.html?proId=${AllTransOrdersProducts[iaoP].prudect}">${"Product "+(iaoP+1)} <span><b>Qunity:</b> ${AllTransOrdersProducts[iaoP].qunity} </span><span><b>Color:</b> ${AllTransOrdersProducts[iaoP].color} </span></a></div>
@@ -344,12 +336,10 @@ function displayAllTransOrders() {
 let returnpostacceptdata={};
      function postAccept(idOrderAccept,iaoVar) {
         if(AllTransOrders[iaoVar].label==null){
-            console.log("null");
        //   document.getElementsByClassName("seelinkspan")[iaoVar].style.display="no";
             insideAccept();
             
             }else{
-                console.log("not null");
                 document.getElementsByClassName("seelinkspan")[iaoVar].style.display="inline";
                 document.getElementsByClassName("seelinkspanAlt")[iaoVar].style.display="inline";
            
@@ -378,14 +368,12 @@ function insideAccept(){
                  function(postAcceptdata) {
                     
                      returnpostacceptdata=postAcceptdata;
-                     console.log(returnpostacceptdata);
                      if(returnpostacceptdata.state==1){
                         document.location.reload();
                      }
  
                  }).catch(
                  function(postAccepterror) {
-                     console.log("FETCH POST ERROR IS :" + postAccepterror);
                  }
              );
      }

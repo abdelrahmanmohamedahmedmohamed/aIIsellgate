@@ -100,7 +100,7 @@
             }
 
             $('.sub-menu-m').each(function(){
-                if($(this).css('display') == 'block') { console.log('hello');
+                if($(this).css('display') == 'block') {
                     $(this).css('display','none');
                     $(arrowMainMenu).removeClass('turn-arrow-main-menu-m');
                 }
@@ -288,7 +288,6 @@
 
 
 fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud').then((data)=>{
-    //console.log(data);
     return data.json();
 }).then((completedata)=>{
     let data1="";
@@ -356,7 +355,6 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
             });
     document.getElementById("postsRow").innerHTML=data1;
 }).catch((err)=>{
-    console.log(err);
 })
 
 
@@ -371,7 +369,6 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
 
 
 fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud').then((data)=>{
-    //console.log(data);
     return data.json();
 }).then((completedata)=>{
     let data1="";
@@ -435,7 +432,6 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
             });
     document.getElementById("postsRows").innerHTML=data1;
 }).catch((err)=>{
-    console.log(err);
 })
 
 
@@ -446,7 +442,6 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
 
 
 fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud').then((data)=>{
-    //console.log(data);
     return data.json();
 }).then((completedata)=>{
     let data1="";
@@ -510,7 +505,6 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
             });
     document.getElementById("postsRowss").innerHTML=data1;
 }).catch((err)=>{
-    console.log(err);
 })
 
 
@@ -519,7 +513,6 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
 
 
 fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud').then((data)=>{
-    //console.log(data);
     return data.json();
 }).then((completedata)=>{
     let data1="";
@@ -583,7 +576,6 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
             });
     document.getElementById("postsRowsss").innerHTML=data1;
 }).catch((err)=>{
-    console.log(err);
 })
 
 
@@ -594,7 +586,6 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
 
 
 fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud').then((data)=>{
-    //console.log(data);
     return data.json();
 }).then((completedata)=>{
     let data1="";
@@ -658,7 +649,6 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
             });
     document.getElementById("postsRowssss").innerHTML=data1;
 }).catch((err)=>{
-    console.log(err);
 })
 
 
@@ -674,7 +664,6 @@ let MyAccountName=document.getElementsByClassName('MyAccountName')[0];
 let  getInfoTopHomeobj= {};
 getInfoTopHome();
 
-console.log(localStorage.getItem("loginUserId"))
 function getInfoTopHome() {
     fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Profile?id=${localStorage.getItem("loginUserId")}`)
         .then(
@@ -685,7 +674,6 @@ function getInfoTopHome() {
         ).then(
             function(getInfoTopHomedata) 
                 {
-                    console.log(getInfoTopHomedata); //the js array of obj / obj  json of api
 
                     getInfoTopHomeobj = getInfoTopHomedata;
                     displaygetInfoTopHome();
@@ -693,7 +681,6 @@ function getInfoTopHome() {
             
         ).catch(
             function(getInfoTopHomeerror) {
-                console.log("FETCH ERROR IS :" + getInfoTopHomeerror);
             }
         
         );
