@@ -105,9 +105,9 @@ ul li:hover {
   position:relative;
 }
 .price {
-  bottom:0px;
+  /* bottom:0px;
   position:absolute;
-  right:0px;
+  right:0px; */
   color:#4488dd;
 }
 .order-table td:first-of-type {

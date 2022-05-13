@@ -129,9 +129,11 @@ let createVendorRow = (element) => {
 
   return data;
 };
+window.goToPurshasePage = () => {
+  window.location.href = "/purchasePage.html";
+}
 let generateShoppingCart = (bigCart) => {
   let table = getShoopingTable();
-  console.table(bigCart);
   for (var i = 0; i < bigCart.length; i++) {
     var value = bigCart[i];
     bigCart[i].forEach((element, index) => {
@@ -150,7 +152,6 @@ let generateShoppingCart = (bigCart) => {
   if (ups !== null) {
     if (ups.length !== 0) {
       ups.forEach((value) => {
-        console.warn(value);
         totalHolders.innerHTML += addNewCost(value.amount);
       });
       amounts = ups.reduce((accumulator, object) => {

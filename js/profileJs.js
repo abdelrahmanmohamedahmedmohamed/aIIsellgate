@@ -217,7 +217,6 @@ document.getElementsByClassName("searchVendorProductBtn")[0].addEventListener("c
                     }
                 ).catch(
                     function(getSearchVendorProductError) {
-                        console.log("FETCH ERROR IS :" + getSearchVendorProductError);
                     }
                 );
         }

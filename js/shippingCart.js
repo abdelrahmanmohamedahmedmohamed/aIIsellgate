@@ -36,6 +36,7 @@ let getUpsStorage = () => {
 
   return JSON.parse(localStorage.getItem("ups"));
 };
+
 let onClickApply = (upsId) => {
   let vendorId = parseInt(getQueryParamaters().vendorid);
   if (vendorId !== null) {
