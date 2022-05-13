@@ -1,5 +1,5 @@
-var baseUrl =
-  "https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/";
+import * as consts from '/js/consts.js';
+
 let enableDisabling = true;
 const getAddToCartButton = () => {
   let addToCartButton = document.querySelector(".addToCartBtn");
@@ -20,10 +20,6 @@ const getHeaderCartContent = () => {
 
 let addToCartButton = getAddToCartButton();
 let cartIcon = getCart();
-let getCurrentUser = () => {
-  let loginUserId = localStorage.getItem("loginUserId");
-  return loginUserId === null ? null : loginUserId;
-};
 const getQueryParamaters = () => {
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
@@ -44,12 +40,13 @@ let disableAddToCartButton = (cartIds) => {
   }
 };
 let getCurrentCart = (isAddToCart = false) => {
-  let user = getCurrentUser;
+  let user = consts.default.getCurrentUser();
   if (user === null) {
     return;
   }
 
-  fetch(`${baseUrl}getcart?id=${user()}`)
+  console.log(consts);
+  fetch(`${consts.default.baseUrl}getcart?id=${user}`)
     .then((result) => {
       return result.json();
     })
@@ -69,7 +66,6 @@ let getCurrentCart = (isAddToCart = false) => {
       increase(cart.length);
     });
 };
-let populateShoppingCart = (cart) => {};
 let populateProducts = (cart) => {
   let cartModal = getHeaderCartContent();
   console.log(cart);
@@ -117,7 +113,7 @@ let populateProducts = (cart) => {
 
 let addToCart = (cart) => {
   let productId = parseInt(getQueryParamaters().proId);
-  fetch(`${baseUrl}addTocart`, {
+  fetch(`${consts.default.baseUrl}addTocart`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -125,7 +121,7 @@ let addToCart = (cart) => {
     },
     body: JSON.stringify({
       prudectid: productId,
-      customerid: getCurrentUser(),
+      customerid: consts.default.getCurrentUser(),
     }),
   }).then(() => {
     disableAddToCartButton([productId]);
@@ -134,7 +130,7 @@ let addToCart = (cart) => {
 };
 let getProductAndPush = (cart, productId) => {
   fetch(
-    `${baseUrl}getSpecialPru?id=${productId}`
+    `${consts.default.baseUrl}getSpecialPru?id=${productId}`
   )
     .then(function (productResponse) {
       return productResponse.json();

@@ -1,5 +1,5 @@
-var baseUrl =
-  "https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/";
+import * as consts from '/js/consts.js';
+
 
 let getShoopingTable = () => {
   let table = document.getElementsByClassName("table-shopping-cart")[0];
@@ -173,7 +173,7 @@ let getTableShoppingCart = (bigCart) => {
 };
 
 let getBigCart = () => {
-  fetch(`${baseUrl}bigcart?id=${getCurrentUser()}`)
+  fetch(`${consts.default.baseUrl}bigcart?id=${consts.default.getCurrentUser()}`)
     .then((result) => {
       return result.json();
     })

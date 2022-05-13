@@ -3091,6 +3091,7 @@ iframe {border: none;}
 
 /*------------------------------------------------------------------
 [ Line height ]*/
+.lh-1 {line-height: 0.8;}
 .lh-10 {line-height: 1.0;}
 .lh-11 {line-height: 1.1;}
 .lh-12 {line-height: 1.2;}
