@@ -1,3 +1,4 @@
+
 /*************customerDetails page******************/
 //customerDetails  by  fetch get
 let parameter = new URLSearchParams(location.search);
@@ -6,7 +7,7 @@ let userDetailsInfobj = {};
 getuserDetailsInfo();
 
 function getuserDetailsInfo() {
-    fetch(`http://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/filterByid?id=${UserSenId}`)
+    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/filterByid?id=${UserSenId}`)
         .then(
             function(userDetailsInfoResponse) {
                 return userDetailsInfoResponse.json();
@@ -29,6 +30,7 @@ ERROR
             }
         ).catch(
             function(userDetailsInfoError) {
+                console.log("FETCH ERROR IS :" + userDetailsInfoError);
             }
         );
 }
@@ -74,7 +76,7 @@ let getNotesArr = [];
 getNotes();
 
 function getNotes() {
-    fetch(`http://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/getNote?id=${UserSenId}`)
+    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getNote?id=${UserSenId}`)
         .then(
             function(getNotesResponse) {
                 return getNotesResponse.json();
@@ -102,6 +104,7 @@ No Notes Exist
             }
         ).catch(
             function(getNotesError) {
+                console.log("FETCH ERROR IS :" + getNotesError);
             }
         );
 }
@@ -145,3 +148,123 @@ function displaygetNotes() {
     document.querySelector(".NotesTbody").innerHTML = getNotesContainer;
 
 }
+/********pertable*******/
+let pertable = [];
+getpertable();
+
+function getpertable() {
+    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/customerorder?id=${UserSenId}`)
+        .then(
+            function(pertableContainerresponses) { //(entire HTTP response)
+                return pertableContainerresponses.json(); // to next then
+
+            }
+        ).then(
+            function(pertableContainerdatas) {
+                pertable = pertableContainerdatas; //the js array of obj / obj  json of api
+                displaypertable();
+            }
+        ).catch(
+            function(pertableContainererrors) {
+                console.log("FETCH ERROR IS :" + pertableContainererrors);
+            }
+        );
+}
+
+function displaypertable() {
+    let pertableContainer = '';
+    for (let pt= 0; pt < pertable.length; pt++) {
+        let productsCont='';
+        AllOrdersProducts=pertable[pt].prudect;
+        console.log(AllOrdersProducts);
+        for (let iaoP = 0; iaoP < AllOrdersProducts.length; iaoP++) {
+            productsCont+= `
+        <div><a class=" dropdown-item" href="product.html?proId=${AllOrdersProducts[iaoP].prudect}">${"Product "+(iaoP+1)} <span><b>Qunity:</b> ${AllOrdersProducts[iaoP].qunity} </span><span><b>Color:</b> ${AllOrdersProducts[iaoP].color} </span></a></div>
+      `;
+    }
+    pertableContainer += `
+        <tr>
+    
+  <td>${pt+1}</td>
+        <td>${pertable[pt].price} ${pertable[pt].currency}</td>
+
+        <td>${pertable[pt].vendorname}</td>
+        <td>${pertable[pt].order_purchase_timestamp}</td>
+        <td>
+        <div class="dropdown show">
+  <a class="btn btn-dark     dropdown-toggle" href="#" role="button" id="${"dropdownMenuLink"+pt}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <i class="fas fa-shopping-basket"></i>
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="${"dropdownMenuLink"+pt}">
+ ${productsCont}
+  </div>
+</div>
+      </td>
+  </tr>
+        `;
+    }
+    document.getElementsByClassName("numPurchased")[0].innerHTML= pertable.length;
+    document.getElementsByClassName("pertableTbody")[0].innerHTML = pertableContainer;
+
+}
+/********soltable*******/
+let soltable = [];
+getsoltable();
+
+function getsoltable() {
+    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/orderbyvendor?vendorid=${UserSenId}`)
+        .then(
+            function(soltableresponses) { //(entire HTTP response)
+                return soltableresponses.json(); // to next then
+
+            }
+        ).then(
+            function(soltabledatas) {
+                soltable = soltabledatas; //the js array of obj / obj  json of api
+                displaysoltable();
+            }
+        ).catch(
+            function(soltableerrors) {
+                console.log("FETCH ERROR IS :" + soltableerrors);
+            }
+        );
+}
+
+function displaysoltable() {
+    let soltableContainer = '';
+    for (let pt= 0; pt < soltable.length; pt++) {
+        let productsCont='';
+        AllOrdersProductss=soltable[pt].prudect;
+        console.log(AllOrdersProductss);
+        for (let iaoP = 0; iaoP < AllOrdersProductss.length; iaoP++) {
+            productsCont+= `
+        <div><a class=" dropdown-item" href="product.html?proId=${AllOrdersProductss[iaoP].prudect}">${"Product "+(iaoP+1)} <span><b>Qunity:</b> ${AllOrdersProductss[iaoP].qunity} </span><span><b>Color:</b> ${AllOrdersProductss[iaoP].color} </span></a></div>
+      `;
+    }
+    soltableContainer += `
+        <tr>
+    
+  <td>${pt+1}</td>
+        <td>${soltable[pt].price} ${soltable[pt].currency}</td>
+
+        <td>${soltable[pt].order_purchase_timestamp}</td>
+        <td>
+        <div class="dropdown show">
+  <a class="btn btn-dark     dropdown-toggle" href="#" role="button" id="${"dropdownMenuLink"+pt}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <i class="fas fa-shopping-basket"></i>
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="${"dropdownMenuLink"+pt}">
+ ${productsCont}
+  </div>
+</div>
+      </td>
+  </tr>
+        `;
+    }
+    document.getElementsByClassName("numSolded")[0].innerHTML= soltable.length;
+    document.getElementsByClassName("soldedtableTbody")[0].innerHTML = soltableContainer;
+
+}
+

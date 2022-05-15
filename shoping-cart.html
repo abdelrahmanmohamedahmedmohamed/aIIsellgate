@@ -47,56 +47,63 @@
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
+					
+
+						<li class="nav-item dropdown"> 
+							<a href="#" class="flex-c-m trans-04 p-lr-25 nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
+							</a>
+									<div class="dropdown-menu dropdown-menux" aria-labelledby="navbarDropdown">
+	<!--
+										<a class="dropdown-item" href="#"></a>
+									<a class="dropdown-item" href="#">  </a>
+	-->
+										 
+							   
+								 <h6 class="p-3" style="color:aqua;">Account Settings</h6>  
+	<!--
+									<a class="dropdown-item" href="#">  </a>
+										 <a class="dropdown-item" href="#"> </a>
+	-->
+										<a class="dropdown-item" href="settings.html">Settings</a>
+										<a class="dropdown-item" href="ProductPage.html">Orders</a>
+										<a class="dropdown-item" href="userOrders.html">Vendor Orders</a>
+									<a class="dropdown-item" href="subscribeVendors.html">Subscribers for Vendor</a>
+										 <a class="dropdown-item" href="upload.html">Upload Product</a>
+										
+										</div>
+							</li>
+					
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQs
+							<i class="fa fa-sign-out logout" ></i>
 						</a>
 
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							USD
-						</a>
+						
 					</div>
 				</div>
 			</div>
 
 			<div class="wrap-menu-desktop how-shadow1">
 				<nav class="limiter-menu-desktop container">
-
-					<!-- Logo desktop -->
-					<a href="#" class="logo">
+					
+					<!-- Logo desktop -->		
+					<a href="index.html" class="logo">
 						<img src="images/LOGO/pzakoYP.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
-					<div class="menu-desktop">
+					<div class="menu-desktop pt-5">
 						<ul class="main-menu">
 							<li>
 								<a href="index.html">Home</a>
-								<ul class="sub-menu">
-									<li><a href="index.html">Homepage 1</a></li>
-									<li><a href="home-02.html">Homepage 2</a></li>
-									<li><a href="home-03.html">Homepage 3</a></li>
-								</ul>
+							
 							</li>
 
-							<li>
+							<!-- <li>
 								<a href="product.html">Shop</a>
-							</li>
+							</li> -->
 
-							<li class="label1" data-label1="hot">
-								<a href="shoping-cart.html">Features</a>
-							</li>
-
-							<li>
-								<a href="blog.html">Blog</a>
-							</li>
+					
 
 							<li>
 								<a href="about.html">About</a>
@@ -105,50 +112,155 @@
 							<li>
 								<a href="contact.html">Contact</a>
 							</li>
+							<li class="loginBtn">
+								<a href="signin.html">Login</a>
+							</li>
 						</ul>
-					</div>
+					</div>	
 
 					<!-- Icon header -->
-					<div class="wrap-icon-header flex-w flex-r-m">
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+					<div class="wrap-icon-header flex-w flex-r-m pt-5">
+						<a href="searchresult.html" class="icon-header-item searchIcon" id="search">
 							<i class="zmdi zmdi-search"></i>
-						</div>
+						</a>
 
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-							data-notify="0">
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="0" >
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
 
-						<a href="#" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
-							data-notify="0">
-							<i class="zmdi zmdi-favorite-outline"></i>
+						<a href="Location.html" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-11 p-r-11 " data-toggle="modal" data-target="#staticBackdrop">
+							<i class="zmdi zmdi-globe"></i>
+<!--                            <i class="zmdi zmdi-pin animated infinite wobble zmdi-hc-fw"></i>-->
 						</a>
 					</div>
+					<div class="container  fixed-bottom ">
+						<!--  Button trigger modal  -->
+				<!--
+				  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+					location
+				  </button>
+				-->
+				
+				  <!-- Modal -->
+				  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-scrollable">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <h5 class="modal-title" id="staticBackdropLabel">
+							Choose your location
+						  </h5>
+						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<div class="modal-body">
+				
+				
+						  <p class="form-group">
+							Delivery options and delivery speeds may vary for different locations
+						  </p>
+				
+						  <div class="form-group locationAPI">
+				
+						  </div>
+				
+						  
+				
+				
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						  <button type="submit" class="btn btn-primary" data-target="#myModal" data-toggle="modal" data-dismiss="modal">Add new location</button>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				
+				
+				
+				  <!--Second Modal-->
+				
+				  <div class="modal fade" data-backdrop="static" id="myModal">
+					<div class="modal-dialog modal-dialog-scrollable">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <h5 class="modal-title">Add New location</h5>
+						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<div class="modal-body">
+				
+				
+						  <!--form second modal-->
+						  <form class="formPostLocation" >
+							<div class="form-group">
+							  <label for="inputName">Full Name</label>
+							  <input type="text" class="form-control" id="inputFullName" placeholder="">
+							</div>
+							<div class="form-group">
+							  <label for="inputAddress">Address</label>
+							  <input type="text" class="form-control" id="inputAddress" placeholder="">
+							</div>
+							<div class="form-group">
+							  <label for="inputCountry">Country</label>
+							  <input type="text" class="form-control" id="inputCountry" placeholder="">
+							  
+							</div>
+							<div class="form-group">
+							  <label for="inputCity">City</label>
+							  <input type="text" class="form-control" id="inputCity" placeholder="">
+							  
+							</div>
+							<div class="form-group">
+							  <label for="inputPhone">Phone</label>
+							  <input type="text" class="form-control" id="inputPhone" placeholder="">
+							</div>
+							<div class="form-group">
+							  <label for="inputCode">Code</label>
+							  <input type="text" class="form-control" id="inputCode" placeholder="">
+							</div>
+						  </form>
+						  
+						  
+						</div>
+				
+						<!--End second form-->
+				
+				
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-outline-primary btnBack"  data-target="#staticBackdrop" data-toggle="modal" data-dismiss="modal">Back</button>
+						  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						  <button type="button" class="btn btn-primary btnPostLocation">Save</button>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
 				</nav>
-			</div>
+			</div>	
 		</div>
 
 		<!-- Header Mobile -->
 		<div class="wrap-header-mobile">
-			<!-- Logo moblie -->
+			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="index.html"><img src="images/LOGO/pzakoYP.png" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->
 			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
-				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
+				<a href="searchresult.html" class="icon-header-item searchIcon" id="search">
 					<i class="zmdi zmdi-search"></i>
-				</div>
+				</a>
 
-				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart"
-					data-notify="0">
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10  js-show-cart">
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
 
-				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti"
-					data-notify="0">
-					<i class="zmdi zmdi-favorite-outline"></i>
+				<a href="Location.html" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-11 p-r-11 " data-toggle="modal" data-target="#staticBackdrop">
+					<i class="zmdi zmdi-globe"></i>
+<!--                            <i class="zmdi zmdi-pin animated infinite wobble zmdi-hc-fw"></i>-->
 				</a>
 			</div>
 
@@ -159,7 +271,7 @@
 				</span>
 			</div>
 		</div>
-
+	
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
@@ -172,21 +284,19 @@
 
 				<li>
 					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Help & FAQs
-						</a>
+					
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							My Account
+							<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
 						</a>
 
+					
+					
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							EN
+							<i class="fa fa-sign-out logout" ></i>
 						</a>
+					
 
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							USD
-						</a>
 					</div>
 				</li>
 			</ul>
@@ -194,27 +304,17 @@
 			<ul class="main-menu-m">
 				<li>
 					<a href="index.html">Home</a>
-					<ul class="sub-menu-m">
-						<li><a href="index.html">Homepage 1</a></li>
-						<li><a href="home-02.html">Homepage 2</a></li>
-						<li><a href="home-03.html">Homepage 3</a></li>
-					</ul>
+				
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
 					</span>
 				</li>
 
-				<li>
+				<!-- <li>
 					<a href="product.html">Shop</a>
-				</li>
+				</li> -->
 
-				<li>
-					<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
-				</li>
-
-				<li>
-					<a href="blog.html">Blog</a>
-				</li>
+			
 
 				<li>
 					<a href="about.html">About</a>
@@ -222,6 +322,9 @@
 
 				<li>
 					<a href="contact.html">Contact</a>
+				</li>
+				<li class="loginBtn">
+					<a href="signin.html">Login</a>
 				</li>
 			</ul>
 		</div>
@@ -257,7 +360,7 @@
 					<i class="zmdi zmdi-close"></i>
 				</div>
 			</div>
-
+			
 			<div class="header-cart-content flex-w js-pscroll">
 				<ul class="header-cart-wrapitem w-full">
 					<li class="header-cart-item flex-w flex-t m-b-12">
@@ -308,20 +411,18 @@
 						</div>
 					</li>
 				</ul>
-
+				
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
 						Total: $75.00
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
-						<a href="shoping-cart.html"
-							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 							View Cart
 						</a>
 
-						<a href="shoping-cart.html"
-							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
 							Check Out
 						</a>
 					</div>
@@ -516,153 +617,9 @@
 
 
 	<!-- Footer -->
-	<footer class="bg3 p-t-75 p-b-32">
-		<div class="container">
-			<div class="row ">
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Categories
-					</h4>
-
-					<ul>
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Women
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Men
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Shoes
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Watches
-							</a>
-						</li>
-					</ul>
-				</div>
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Help
-					</h4>
-
-					<ul>
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Track Order
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Returns
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Shipping
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								FAQs
-							</a>
-						</li>
-					</ul>
-				</div>
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						GET IN TOUCH
-					</h4>
-
-					<p class="stext-107 cl7 size-201">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
-						on (+1) 96 716 6879
-					</p>
-
-					<div class="p-t-27">
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-facebook"></i>
-						</a>
-
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-instagram"></i>
-						</a>
-
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-pinterest-p"></i>
-						</a>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Newsletter
-					</h4>
-
-					<form>
-						<div class="wrap-input1 w-full p-b-4">
-							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
-								placeholder="email@example.com">
-							<div class="focus-input1 trans-04"></div>
-						</div>
-
-						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-								Subscribe
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-
-			<div class="p-t-40">
-				<div class="flex-c-m flex-w p-b-18">
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
-					</a>
-				</div>
-
-				<p class="stext-107 cl6 txt-center">
-
-					Copyright &copy;
-					<script>document.write(new Date().getFullYear());</script> By Sell Gate <i class="fa fa-heart-o"
-						aria-hidden="true"></i>
-
-
-				</p>
-			</div>
-		</div>
-	</footer>
+	<footer>
+		<p>Developed By AI Sell Gate 2022</p>
+			</footer>
 
 
 	<!-- Back to top -->

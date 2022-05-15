@@ -39,7 +39,7 @@ function selectFilterFunc(elem) {
     let getFilterUsersArr = [];
 
     function getFilterUsers() {
-        fetch(`http://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/filterBytag?tag=${selectedValue}`)
+        fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/filterBytag?tag=${selectedValue}`)
             .then(
                 function(getFilterUsersResponse) { //(entire HTTP response)
                     return getFilterUsersResponse.json(); // to next then
@@ -97,7 +97,7 @@ let getAllUsersArr = [];
 getAllUsers();
 
 function getAllUsers() {
-    fetch('http://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/getallprofile')
+    fetch('http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getallprofile')
         .then(
             function(getAllUsersResponse) { //(entire HTTP response)
                 return getAllUsersResponse.json(); // to next then
@@ -151,7 +151,7 @@ document.getElementsByClassName("searchIdBtn")[0].addEventListener("click",
 
 
         function getSearchId() {
-            fetch(`http://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/filterByid?id=${SearchFiledValue}`)
+            fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/filterByid?id=${SearchFiledValue}`)
                 .then(
                     function(getSearchIdResponse) {
                         return getSearchIdResponse.json();
@@ -216,7 +216,7 @@ document.getElementsByClassName("searchEmailBtn")[0].addEventListener("click",
 
 
         function getSearchEmail() {
-            fetch(`http://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/filterByemail?email=${SearchFiledValue2}`)
+            fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/filterByemail?email=${SearchFiledValue2}`)
                 .then(
                     function(getSearchEmailResponse) {
                         return getSearchEmailResponse.json();
@@ -282,7 +282,7 @@ document.getElementsByClassName("searchNameBtn")[0].addEventListener("click",
         }
 
         function getSearchName() {
-            fetch(`http://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/filterByname?name=${SearchFiledValue3}`)
+            fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/filterByname?name=${SearchFiledValue3}`)
                 .then(
                     function(getSearchNameResponse) {
                         return getSearchNameResponse.json();
@@ -356,7 +356,7 @@ function getDelete(idDeleted) {
         })
     }
 
-    fetch(`http://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/blockAccount`, fetchData)
+    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/blockAccount`, fetchData)
         .then(
             function(getDeleteResponse) {
                 return getDeleteResponse.json();

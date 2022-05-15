@@ -363,9 +363,12 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
 
 
 
-
-
-
+let logout = () => {
+    console.log('here');
+    localStorage.removeItem("loginUserId");
+    localStorage.removeItem("ups");
+    window.location.href = '/';
+}
 
 
 fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud').then((data)=>{
@@ -657,12 +660,36 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
 
 
 
+
+
+
 /*****************//////
 //getInfoTopHome  by  fetch get
 let MyAccountImage=document.getElementsByClassName('MyAccountImage')[0];
 let MyAccountName=document.getElementsByClassName('MyAccountName')[0];
+
 let  getInfoTopHomeobj= {};
-getInfoTopHome();
+
+if(localStorage.getItem("loginUserId") == null)
+{
+    
+    document.getElementsByClassName('MyAccountImage')[1].style.display ="none"
+
+    MyAccountImage.style.display="none"
+   
+   // document.getElementsByClassName('MyAccountImage')[1].style.display ="none"
+
+
+}else{
+    getInfoTopHome()
+    document.getElementsByClassName("loginBtn")[0].style.display ="none"
+    document.getElementsByClassName("loginBtn")[1].style.display ="none"
+
+
+}
+
+
+
 
 function getInfoTopHome() {
     fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Profile?id=${localStorage.getItem("loginUserId")}`)
@@ -674,7 +701,6 @@ function getInfoTopHome() {
         ).then(
             function(getInfoTopHomedata) 
                 {
-
                     getInfoTopHomeobj = getInfoTopHomedata;
                     displaygetInfoTopHome();
                 }
@@ -686,14 +712,97 @@ function getInfoTopHome() {
         );
     
 }
-
-
-
 function displaygetInfoTopHome() {
     MyAccountImage.src=getInfoTopHomeobj.image;
-    MyAccountName.textContent=getInfoTopHomeobj.fullname;
-    
-    
-    
+    MyAccountName.textContent=getInfoTopHomeobj.fullname;  
+    document.getElementsByClassName('MyAccountImage')[1].src=getInfoTopHomeobj.image;
+    document.getElementsByClassName('MyAccountName')[1].src=getInfoTopHomeobj.image;
 }
 
+/* logout*/ 
+
+
+document.getElementsByClassName("logout")[0].onclick = function(){
+    logout();
+};
+
+
+
+console.log(localStorage.getItem("loginUserId"));
+
+
+
+
+
+
+document.getElementsByClassName("logout")[1].onclick = function(){
+    logout();
+};
+
+
+
+console.log(localStorage.getItem("loginUserId"));
+getHistoryHome();
+function getHistoryHome(){
+
+    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/history?customerid=${localStorage.getItem("loginUserId")}`).then((datahist)=>{
+  
+        return datahist.json();
+    }).then((completedata2)=>{
+        let data2="";
+    
+    
+        completedata2.reverse().map((valuess)=>{
+            let imagesString222=valuess.images;
+            let imagesArray222 = imagesString222.split("~");
+            data2 +=
+               `
+     <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 recommend p-b-50 isotope-item women ">
+                        <!-- Block2 -->
+                        <div class="block2">
+                            <div class="block2-pic hov-img0">
+                                <img src="${imagesArray222[0]}" alt="IMG-PRODUCT">
+    
+                                <a href="product.html?proId=${valuess.id}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                                    Quick View
+                                </a>
+                            </div>
+    
+                            <div class="block2-txt flex-w flex-t p-t-14">
+                                <div class="block2-txt-child1 flex-col-l ">
+                                    <a href="product.html?proId=${valuess.id}" class=" text-recomend stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                    ${valuess.name}
+                                    </a>
+    
+                                    
+                                
+    
+          
+                                <span class="stext-105 cl3">
+                                    
+                                    </span>
+                        
+                                                            </div>
+    
+                                <div class="block2-txt-child2 flex-r p-t-3">
+                                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                        <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+                                        <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+    
+            
+         
+    ` 
+                });
+        document.getElementById("postsHistoryHome").innerHTML=data2;
+    }).catch((err2)=>{
+        console.log(err2);
+    })
+        
+    }

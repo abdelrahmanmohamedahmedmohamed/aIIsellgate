@@ -1,0 +1,36 @@
+
+:root {
+    --first-color: #4EA1D3;
+    --sec-color: #F53163;
+    --black-color: black;
+    --gray-color: #333;
+    --lightGray-color: #999;
+    --veryLightGray-color: #EBEEFB;
+    --white-color: white;
+    --zety-color: #F7F1E3;
+}
+/*********************/
+footer{
+    padding: 16px 10px;
+    background-color:black;
+    text-align: center;
+   font-size: 15px;
+    color:white
+}
+
+.parentSearchInpBtn{
+    margin-top: 30px ;
+    margin-bottom:20px;
+}
+.parentSearchInpBtn input,.parentSearchInpBtn button{
+   padding: 15px 20px;
+}
+.parentsearchresult{
+    background: url('../images/search.svg') center center/cover;
+    height: 80vh;
+}
+.aqlk{
+    width: 150px !important; 
+}
+
+

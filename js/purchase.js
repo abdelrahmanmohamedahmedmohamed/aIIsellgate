@@ -29,8 +29,8 @@ let createProduct = (element) => {
 <tr style="border-bottom: 1px solid #ddd;">
 </tr>
 </tr>
-
-`;
+`
+;
 };
 
 let generatePurchase = (bigCart) => {
@@ -79,18 +79,114 @@ let getBigCart = () => {
     });
 };
 
-let getCard = () => {
-  fetch(
-    `${consts.default.baseUrl}getcard?id=${consts.default.getCurrentUser()}`
-  )
-    .then((result) => {
-      return result.json();
-    })
-    .then((card) => {
-        console.log(card);
-    });
-};
+
+
+// let getCard = () => {
+//   fetch(
+//     `https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getcard?id=${localStorage.getItem("loginUserId")}`
+//   )
+//     .then((resultc) => {
+//       return resultc.json();
+//     })
+//     .then((cardc) => {
+//         console.log(cardc);
+//     });
+// };
 
 getBigCart();
 
-getCard();
+//  getCard();
+
+
+
+//getAirline  by  fetch get
+let getvisa = {};
+getgetvisa();
+
+function getgetvisa(){
+
+  console.log("lkndfkdsnkjfbaskf jnf" + localStorage.getItem("loginUserId") )
+    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getcard?id=${localStorage.getItem("loginUserId")}`)
+        .then(
+            function(response) { //(entire HTTP response)
+                return response.json(); // to next then
+
+            }
+        ).then(
+            function(data) {
+                getvisa = data; //the js array of obj / obj  json of api
+                console.log(data)
+                displaygetgetvisa();
+                console.log(getvisa.last4)
+                if(getvisa.last4 != "null"){
+                  document.getElementsByClassName("addvisa")[0].style.display ="none"
+          
+             
+                  console.log("esfsdgfdsf");
+                }
+            }
+        ).catch(
+            function(error) {
+                console.log("FETCH ERROR IS :" + error);
+            }
+        );
+}
+function displaygetgetvisa() {
+
+  document.getElementsByClassName("last4")[0].innerHTML = getvisa.last4
+  document.getElementsByClassName("expdata")[0].innerHTML = getvisa.expdate
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Location from  purchase*/ 
+
+
+//getAirline by fetch get
+let getprimarylocation = {};
+getgetprimarylocation();
+
+function getgetprimarylocation() {
+  console.log("welcomme")
+    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getprimarylocation?id=1`)
+        .then(
+            function(response) { //(entire HTTP response)
+                return response.json(); // to next then
+
+            }
+        ).then(
+            function(data) {
+              getprimarylocation = data; //the js array of obj / obj  json of api
+                displaygetprimarylocation();
+            
+            }
+        ).catch(
+            function(error) {
+                console.log("FETCH ERROR IS :" + error);
+            }
+        );
+}
+function displaygetprimarylocation() {
+
+  document.getElementsByClassName("locationstreet")[0].innerHTML =getprimarylocation.street1
+  document.getElementsByClassName("locationstreet1")[0].innerHTML =getprimarylocation.city
+}
+
+/* End Location from  purchase*/

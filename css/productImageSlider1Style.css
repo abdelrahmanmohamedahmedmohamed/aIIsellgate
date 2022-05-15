@@ -28,3 +28,11 @@ img{
 .img-item:hover{
     opacity: 0.8;
 }
+
+footer{
+    padding: 16px 10px;
+    background-color:black;
+    text-align: center;
+   font-size: 15px;
+    color:white
+}

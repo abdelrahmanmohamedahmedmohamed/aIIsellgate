@@ -20,7 +20,7 @@ const getHeaderCartContent = () => {
 
 let addToCartButton = getAddToCartButton();
 let cartIcon = getCart();
-const getQueryParamaters = () => {
+window.getQueryParamaters = () => {
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });

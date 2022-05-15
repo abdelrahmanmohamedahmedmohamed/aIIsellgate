@@ -157,3 +157,10 @@ padding-bottom: 15px;
 margin:auto;
 margin-top: 10px;
 }
+footer{
+  padding: 16px 10px;
+  background-color:black;
+  text-align: center;
+ font-size: 15px;
+  color:white
+}

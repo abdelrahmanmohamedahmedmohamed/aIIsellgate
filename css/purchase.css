@@ -279,3 +279,11 @@ ul li:hover {
 .visamasterCard{
 margin-top: 25px;
 }
+
+footer{
+  padding: 16px 10px;
+  background-color:black;
+  text-align: center;
+ font-size: 15px;
+  color:white
+}

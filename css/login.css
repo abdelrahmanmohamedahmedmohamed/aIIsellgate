@@ -363,3 +363,12 @@ input:focus {
 #exampleModalFB{
 z-index: 1500;
 }
+
+
+footer{
+    padding: 16px 10px;
+    background-color:black;
+    text-align: center;
+   font-size: 15px;
+    color:white
+}

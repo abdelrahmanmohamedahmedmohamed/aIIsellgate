@@ -101,7 +101,7 @@ let createProduct = (element) => {
     "</tr>";
   return data;
 };
-let goToShippingCompanies = (vendorid) => {
+window.goToShippingCompanies = (vendorid) => {
   window.location.href = `shippingCompany.html?vendorid=${vendorid}`;
 };
 

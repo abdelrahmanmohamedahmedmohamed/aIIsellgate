@@ -9,7 +9,6 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	
       <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
@@ -37,12 +36,13 @@
     <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/homegloble.css">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
 	
 	<!-- Header -->
-	<header>
+	<header class="header-v4">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
@@ -53,15 +53,13 @@
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQs
-						</a>
+					
 
 						<li class="nav-item dropdown"> 
 							<a href="#" class="flex-c-m trans-04 p-lr-25 nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
 							</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<div class="dropdown-menu dropdown-menux" aria-labelledby="navbarDropdown">
 	<!--
 										<a class="dropdown-item" href="#"></a>
 									<a class="dropdown-item" href="#">  </a>
@@ -76,32 +74,27 @@
 										<a class="dropdown-item" href="settings.html">Settings</a>
 										<a class="dropdown-item" href="ProductPage.html">Orders</a>
 										<a class="dropdown-item" href="userOrders.html">Vendor Orders</a>
-									<a class="dropdown-item" href="#">Subscribers for Vendor</a>
+									<a class="dropdown-item" href="subscribeVendors.html">Subscribers for Vendor</a>
 										 <a class="dropdown-item" href="upload.html">Upload Product</a>
 										
-										<a class="dropdown-item" href="#"><i class="fa fa-sign-out" ></i> &nbsp; Logout</a>
+										
 										</div>
 							</li>
-
+					
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							EN
+							<i class="fa fa-sign-out logout" ></i>
 						</a>
 
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							USD
-						</a>
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							<i class="fa fa-sign-out" ></i>
-						</a>
+						
 					</div>
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop">
+			<div class=" how-shadow1"><!--wrap-menu-desktop-->
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
-					<a href="#" class="logo">
+					<a href="index.html" class="logo">
 						<img src="images/LOGO/pzakoYP.png" alt="IMG-LOGO">
 					</a>
 
@@ -110,173 +103,149 @@
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a href="index.html">Home</a>
-								<ul class="sub-menu">
-									<li><a href="index.html">Homepage 1 </a></li>
-									<li><a href="home-02.html">Homepage 2</a></li>
-									<li><a href="home-03.html">Homepage 3</a></li>
-								</ul>
+							
 							</li>
 
-							<li>
+							<!-- <li>
 								<a href="product.html">Shop</a>
-							</li>
+							</li> -->
 
-<!--
-							<li class="label1" data-label1="hot">
-								<a href="shoping-cart.html">Features</a>
-							</li>
+					
 
-							<li>
-								<a href="blog.html">Blog</a>
-							</li>
--->
-
-							<li>
+							<li >
 								<a href="about.html">About</a>
 							</li>
 
 							<li>
 								<a href="contact.html">Contact</a>
 							</li>
+							<li class="loginBtn">
+								<a href="signin.html">Login</a>
+							</li>
 						</ul>
 					</div>	
 
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m pt-5">
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search" id="search">
+						<a href="searchresult.html" class="icon-header-item searchIcon" id="search">
 							<i class="zmdi zmdi-search"></i>
-						</div>
+						</a>
 
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart">
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="0" >
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
 
-	
-                           				
-                        
-                        	<a href="Location.html" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-11 p-r-11 " data-toggle="modal" data-target="#staticBackdrop">
+						<a href="Location.html" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-11 p-r-11 " data-toggle="modal" data-target="#staticBackdrop">
 							<i class="zmdi zmdi-globe"></i>
 <!--                            <i class="zmdi zmdi-pin animated infinite wobble zmdi-hc-fw"></i>-->
 						</a>
-<!--                        	<a href="Location.html" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-11 p-r-11 " data-toggle="modal" data-target="#staticBackdrop">-->
-<!--							<i class="zmdi zmdi-globe"></i>-->
-<!--
-                             <i class="zmdi zmdi-settings zmdi-hc-spin"></i>
-						</a>
--->
-                        
-                        
-                        
-                        
-<!--                        <i class="zmdi zmdi-rotate-right zmdi-hc-spin"></i>  -->
 					</div>
-                    <div class="container  fixed-bottom ">
-        <!--  Button trigger modal  -->
-<!--
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-    location
-  </button>
--->
-
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">
-            Choose your location
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-
-
-          <p class="form-group">
-            Delivery options and delivery speeds may vary for different locations
-          </p>
-
-          <div class="form-group locationAPI">
-
-          </div>
-
-          
-
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary" data-target="#myModal" data-toggle="modal" data-dismiss="modal">Add new location</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  <!--Second Modal-->
-
-  <div class="modal fade" data-backdrop="static" id="myModal">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Add New location</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-
-
-          <!--form second modal-->
-          <form class="formPostLocation" >
-            <div class="form-group">
-              <label for="inputName">Full Name</label>
-              <input type="text" class="form-control" id="inputFullName" placeholder="">
-            </div>
-            <div class="form-group">
-              <label for="inputAddress">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="">
-            </div>
-            <div class="form-group">
-              <label for="inputCountry">Country</label>
-              <input type="text" class="form-control" id="inputCountry" placeholder="">
-              
-            </div>
-            <div class="form-group">
-              <label for="inputCity">City</label>
-              <input type="text" class="form-control" id="inputCity" placeholder="">
-              
-            </div>
-            <div class="form-group">
-              <label for="inputPhone">Phone</label>
-              <input type="text" class="form-control" id="inputPhone" placeholder="">
-            </div>
-            <div class="form-group">
-              <label for="inputCode">Code</label>
-              <input type="text" class="form-control" id="inputCode" placeholder="">
-            </div>
-          </form>
-          
-          
-        </div>
-
-        <!--End second form-->
-
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-primary btnBack"  data-target="#staticBackdrop" data-toggle="modal" data-dismiss="modal">Back</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary btnPostLocation">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+					<div class="container location fixed-bottom">
+						<!-- Button trigger modal -->
+					
+					  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+						location
+					  </button> -->
+					
+					
+					  <!-- Modal -->
+					  <div class="modal fade location11" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-scrollable">
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <h5 class="modal-title" id="staticBackdropLabel">
+								Choose your location
+							  </h5>
+							  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="modal-body">
+					
+					
+							  <p class="form-group">
+								Delivery options and delivery speeds may vary for different locations
+							  </p>
+					
+							  <div class="form-group locationAPI">
+					
+							  </div>
+					
+							  
+					
+					
+							</div>
+							<div class="modal-footer">
+							  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							  <button type="submit" class="btn btn-primary" data-target="#myModal" data-toggle="modal" data-dismiss="modal">Add new location</button>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					
+					
+					
+					  <!--Second Modal-->
+					
+					  <div class="modal fade" data-backdrop="static" id="myModal">
+						<div class="modal-dialog modal-dialog-scrollable">
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <h5 class="modal-title">Add New location</h5>
+							  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="modal-body">
+					
+					
+							  <!--form second modal-->
+							  <form class="formPostLocation" >
+								<div class="form-group">
+								  <label for="inputName">Full Name</label>
+								  <input type="text" class="form-control" id="inputFullName" placeholder="">
+								</div>
+								<div class="form-group">
+								  <label for="inputAddress">Address</label>
+								  <input type="text" class="form-control" id="inputAddress" placeholder="">
+								</div>
+								<div class="form-group">
+								  <label for="inputCountry">Country</label>
+								  <input type="text" class="form-control" id="inputCountry" placeholder="">
+								  
+								</div>
+								<div class="form-group">
+								  <label for="inputCity">City</label>
+								  <input type="text" class="form-control" id="inputCity" placeholder="">
+								  
+								</div>
+								<div class="form-group">
+								  <label for="inputPhone">Phone</label>
+								  <input type="text" class="form-control" id="inputPhone" placeholder="">
+								</div>
+								<div class="form-group">
+								  <label for="inputCode">Code</label>
+								  <input type="text" class="form-control" id="inputCode" placeholder="">
+								</div>
+							  </form>
+							  
+							  
+							</div>
+					
+							<!--End second form-->
+					
+					
+							<div class="modal-footer">
+							  <button type="button" class="btn btn-outline-primary btnBack"  data-target="#staticBackdrop" data-toggle="modal" data-dismiss="modal">Back</button>
+							  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							  <button type="button" class="btn btn-primary btnPostLocation">Save</button>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div> 
 				</nav>
 			</div>	
-            
 		</div>
 
 		<!-- Header Mobile -->
@@ -288,28 +257,29 @@
 
 			<!-- Icon header -->
 			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
-				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
+				<a href="searchresult.html" class="icon-header-item searchIcon" id="search">
 					<i class="zmdi zmdi-search"></i>
-				</div>
+				</a>
 
-				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="0" >
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10  js-show-cart">
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
 
 				<a href="Location.html" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-11 p-r-11 " data-toggle="modal" data-target="#staticBackdrop">
 					<i class="zmdi zmdi-globe"></i>
-				<!--<i class="zmdi zmdi-pin animated infinite wobble zmdi-hc-fw"></i>-->
+<!--                            <i class="zmdi zmdi-pin animated infinite wobble zmdi-hc-fw"></i>-->
 				</a>
 			</div>
-
+			
 			<!-- Button show menu -->
 			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
 				<span class="hamburger-box">
 					<span class="hamburger-inner"></span>
 				</span>
 			</div>
+			
 		</div>
-
+	
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
@@ -322,24 +292,18 @@
 
 				<li>
 					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Help & FAQs
-						</a>
+					
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							My Account
+							<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
 						</a>
 
+					
+					
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							EN
+							<i class="fa fa-sign-out logout" ></i>
 						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							USD
-						</a>
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							<i class="fa fa-sign-out" ></i>
-						</a>
+					
 
 					</div>
 				</li>
@@ -348,21 +312,17 @@
 			<ul class="main-menu-m">
 				<li>
 					<a href="index.html">Home</a>
-					<ul class="sub-menu-m">
-						<li><a href="index.html">Homepage 1</a></li>
-						<li><a href="home-02.html">Homepage 2</a></li>
-						<li><a href="home-03.html">Homepage 3</a></li>
-					</ul>
+				
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
 					</span>
 				</li>
 
-				<li>
+				<!-- <li>
 					<a href="product.html">Shop</a>
-				</li>
+				</li> -->
 
-				
+			
 
 				<li>
 					<a href="about.html">About</a>
@@ -370,6 +330,9 @@
 
 				<li>
 					<a href="contact.html">Contact</a>
+				</li>
+				<li class="loginBtn">
+					<a href="signin.html">Login</a>
 				</li>
 			</ul>
 		</div>
@@ -390,6 +353,7 @@
 			</div>
 		</div>
 	</header>
+
 
 	<!-- Cart -->
 	<div class="wrap-header-cart js-panel-cart">
@@ -476,18 +440,38 @@
 		</div>
 	</div>
 
-		
+	<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<img class="d-block w-100 h-25" src="images/slide-01.jpg" alt="First slide">
+		  </div>
+		  <div class="carousel-item">
+			<img class="d-block w-100 h-25" src="images/slide-01.jpg" alt="Second slide">
+		  </div>
+		  <div class="carousel-item">
+			<img class="d-block w-100 h-25" src="images/slide-01.jpg" alt="Third slide">
+		  </div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="sr-only">Next</span>
+		</a>
+	  </div> -->
 
 	<!-- Slider -->
-	<section class="section-slide">
+	 <section class="section-slide mt-2">
 		<div class="wrap-slick1">
 			<div class="slick1">
-				<div class="item-slick1" style="background-image: url(images/slide-01.jpg);">
+				<div class="item-slick1" style="background-image: url(\img12/61jovjd+f9L._SX3000_.jpg);">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
 								<span class="ltext-101 cl2 respon2">
-									Women Collection 2018
+									Women Collection 2022
 								</span>
 							</div>
 								
@@ -498,20 +482,20 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<!-- <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
-								</a>
+								</a> -->
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="item-slick1" style="background-image: url(images/slide-02.jpg);">
+				<div class="item-slick1 " style="background-image: url(\img12/61DUO0NqyyL._SX3000_.jpg);">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
 								<span class="ltext-101 cl2 respon2">
-									Men New-Season
+									Men New-Season 2022
 								</span>
 							</div>
 								
@@ -522,20 +506,20 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<!-- <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
-								</a>
+								</a> -->
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="item-slick1" style="background-image: url(images/slide-03.jpg);">
+				<div class="item-slick1" style="background-image: url(\img12/71qid7QFWJL._SX3000_.jpg);">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
 								<span class="ltext-101 cl2 respon2">
-									Men Collection 2018
+									Men Collection 2022
 								</span>
 							</div>
 								
@@ -546,20 +530,43 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<!-- <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
-								</a>
+								</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item-slick1" style="background-image: url(\img12/711Y9Al9RNL._SX3000_.jpg);">
+					<div class="container h-full">
+						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
+								<span class="ltext-101 cl2 respon2">
+									Men Collection 2022
+								</span>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="rotateInUpRight" data-delay="800">
+								<h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
+									New arrivals
+								</h2>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
+								<!-- <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+									Shop Now
+								</a> -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> 
 
 
 	<!-- Banner -->
-	<div class="sec-banner bg0 p-t-80 p-b-50">
+	<div class="sec-banner bg0 p-t-20 p-b-50">
 		<div class="container-fluid">
 			<div class="row flex-nowrap recom">
 				<div class="col-md-6 col-xl-4 col-sm-12 col-lg-4 p-b-30 m-lr-auto ">
@@ -736,10 +743,10 @@
     
 	<!-- Product Overview search resualts-->
 	<section class="bg0 p-t-23 pb-500" >
-		<div class="container-fluid ">
+		<div class="container">
 			<div class="p-b-30">
 				<h3 class="ltext-103 cl5">
-					Recommend Section
+					All Products 
 				</h3>
 			</div>
 			 <div class="row flex-nowrap recom" id="postsRow">
@@ -753,287 +760,11 @@
 		
 		
 	</section>
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!--Start Create Section recommend-->
-    <section class="bg0 p-t-23 pb-500 wrapper d-flex">
-		<div class="container-fluid" >
-			<div class="p-b-30">
-				<h3 class="ltext-103 cl5">
-					Near places
-				</h3>
-			</div>
-			 <div class="row flex-nowrap recom" id="postsRows">
-        
-        
-         
-        </div>
-				
-			</div>
-		
-		
-		
-	</section>
-    
-    
-    
-    
-  <section class="bg0 p-t-23 pb-500">
-		<div class="container-fluid" >
-			<div class="p-b-30">
-				<h3 class="ltext-103 cl5">
-					Products Overview
-				</h3>
-			</div>
-
-			<div class="flex-w flex-sb-m p-b-52">
-				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
-						All Products
-					</button>
-				</div>
-
-				<div class="flex-w flex-c-m m-tb-10">
-					<div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
-						<i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
-						<i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						 Filter
-					</div>
-
-					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
-						<i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
-						<i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						Search
-					</div>
-				</div>
-				
-				<!-- Search product -->
-				<div class="dis-none panel-search w-full p-t-10 p-b-15">
-					<div class="bor8 dis-flex p-l-15">
-						<button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
-							<i class="zmdi zmdi-search"></i>
-						</button>
-
-						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
-					</div>	
-				</div>
-
-				<!-- Filter -->
-				<div class="dis-none panel-filter w-full p-t-10">
-					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
-						<div class="filter-col1 p-r-15 p-b-27">
-							<div class="mtext-102 cl2 p-b-15">
-								Sort By
-							</div>
-
-							<ul>
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Default
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Popularity
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Average rating
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										Newness
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Price: Low to High
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Price: High to Low
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="filter-col2 p-r-15 p-b-27">
-							<div class="mtext-102 cl2 p-b-15">
-								Price
-							</div>
-
-							<ul>
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										All
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										$0.00 - $50.00
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										$50.00 - $100.00
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										$100.00 - $150.00
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										$150.00 - $200.00
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										$200.00+
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="filter-col3 p-r-15 p-b-27">
-							<div class="mtext-102 cl2 p-b-15">
-								Color
-							</div>
-
-							<ul>
-								<li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #222;">
-										<i class="zmdi zmdi-circle"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04">
-										Black
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #4272d7;">
-										<i class="zmdi zmdi-circle"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										Blue
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #b3b3b3;">
-										<i class="zmdi zmdi-circle"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04">
-										Grey
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #00ad5f;">
-										<i class="zmdi zmdi-circle"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04">
-										Green
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #fa4251;">
-										<i class="zmdi zmdi-circle"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04">
-										Red
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #aaa;">
-										<i class="zmdi zmdi-circle-o"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04">
-										White
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="filter-col4 p-b-27">
-							<div class="mtext-102 cl2 p-b-15">
-								Tags
-							</div>
-
-							<div class="flex-w p-t-4 m-r--5">
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Fashion
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Lifestyle
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Denim
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Streetstyle
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Crafts
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			 <div class="row flex-nowrap recom" id="postsRowss">
-        
-        
-         
-        </div>
-				
-			</div>
-		
-		
-		
-	</section>
-       
-    
-    
-     <section class="bg0 p-t-23 pb-500">
-		<div class="container-fluid" >
+<!-------------------------------------------------------------------------->
+      <!-- SECTION : Your Browsing History -->
+      <!-------------------------------------------------------------------------->
+	  <section class="bg0 p-t-23 pb-500">
+		<div class="container" >
 			<div class="p-b-30">
 				<h3 class="ltext-103 cl5">
 					History
@@ -1041,7 +772,7 @@
 			</div>
 
 
-			 <div class="row flex-nowrap recom" id="postsRowsss">
+			 <div class="row flex-nowrap recom" id="postsHistoryHome">
         
         
          
@@ -1052,183 +783,23 @@
 		
 		
 	</section>
-    
-    
-    
-    
-    
-    
-    
-   <section class="bg0 p-t-23 pb-500">
-		<div class="container-fluid" >
-			<div class="p-b-30">
-				<h3 class="ltext-103 cl5">
-					Best Sellers
-				</h3>
-			</div>
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-
-			 <div class="row flex-nowrap recom" id="postsRowssss">
-        
-        
-         
-        </div>
-				
-			</div>
-		
-		
-		
-	</section> 
-    
-    
-    
-    
     
 	<!-- Footer -->
-	<footer class="bg3 p-t-75 p-b-32">
-		<div class="container">
-			<div class="row ">
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Categories
-					</h4>
-
-					<ul>
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Women
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Men
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Shoes
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Watches
-							</a>
-						</li>
-					</ul>
-				</div>
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Help
-					</h4>
-
-					<ul>
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Track Order
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Returns 
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Shipping
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								FAQs
-							</a>
-						</li>
-					</ul>
-				</div>
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						GET IN TOUCH
-					</h4>
-
-					<p class="stext-107 cl7 size-201">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
-					</p>
-
-					<div class="p-t-27">
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-facebook"></i>
-						</a>
-
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-instagram"></i>
-						</a>
-
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-pinterest-p"></i>
-						</a>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Newsletter
-					</h4>
-
-					<form>
-						<div class="wrap-input1 w-full p-b-4">
-							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
-							<div class="focus-input1 trans-04"></div>
-						</div>
-
-						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-								Subscribe
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-
-			<div class="p-t-40">
-				<div class="flex-c-m flex-w p-b-18">
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
-					</a>
-				</div>
-
-				<p class="stext-107 cl6 txt-center">
-				
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> By Sell Gate <i class="fa fa-heart-o" aria-hidden="true"></i> 
-
-
-				</p>
-			</div>
-		</div>
-	</footer>
+	<footer>
+		<p>Developed By AI Sell Gate 2022</p>
+			</footer>
 
 <!--
       <footer class="mainFooter">

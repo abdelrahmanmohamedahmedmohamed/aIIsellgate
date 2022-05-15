@@ -206,4 +206,12 @@ table.table .avatar {
 	float: left;
 	margin-top: 10px;
 	font-size: 13px;
-}    
+}   
+
+footer{
+    padding: 16px 10px;
+    background-color:black;
+    text-align: center;
+   font-size: 15px;
+    color:white
+}

@@ -84,3 +84,11 @@ fieldset legend{
   width: 100%;
  border-radius: 6px; 
 }
+
+footer{
+    padding: 16px 10px;
+    background-color:black;
+    text-align: center;
+   font-size: 15px;
+    color:white
+}

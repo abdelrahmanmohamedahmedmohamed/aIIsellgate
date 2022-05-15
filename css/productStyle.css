@@ -988,3 +988,12 @@ display: block;
 .text-recomend{
     max-height: 50px;
 }
+
+
+footer{
+    padding: 16px 10px;
+    background-color:black;
+    text-align: center;
+   font-size: 15px;
+    color:white
+}

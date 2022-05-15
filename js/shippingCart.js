@@ -1,4 +1,5 @@
 //  GET request using fetch()
+
 let upsList = [];
 fetch(
   "https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/shippmentRate?customerid=1&prudectid=1"
@@ -37,8 +38,8 @@ let getUpsStorage = () => {
   return JSON.parse(localStorage.getItem("ups"));
 };
 
-let onClickApply = (upsId) => {
-  let vendorId = parseInt(getQueryParamaters().vendorid);
+window.onClickApply = (upsId) => {
+  let vendorId = parseInt(window.getQueryParamaters().vendorid);
   if (vendorId !== null) {
     let amount = upsList.find((a) => a.idRate === upsId).amount;
     let upsStorage = getUpsStorage();
