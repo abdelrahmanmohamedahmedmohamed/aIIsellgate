@@ -40,18 +40,33 @@ let getUpsStorage = () => {
 
 window.onClickApply = (upsId) => {
   let vendorId = parseInt(window.getQueryParamaters().vendorid);
+  let buyNowProductId = parseInt(getQueryParamaters().productId);
+  console.log(buyNowProductId);
   if (vendorId !== null) {
     let amount = upsList.find((a) => a.idRate === upsId).amount;
     let upsStorage = getUpsStorage();
     let isVendorFound = upsStorage.find((a) => a.vendorId === vendorId);
-    if (isVendorFound) {
-      isVendorFound.upsId = upsId;
-      isVendorFound.amount = amount;
+    if(!isNaN(buyNowProductId)) {
+      console.log('not null');
+      upsStorage.push({ upsId, amount, vendorId , buyNowCart : true  });
       localStorage.setItem("ups", JSON.stringify(upsStorage));
     } else {
-      upsStorage.push({ upsId, amount, vendorId });
-      localStorage.setItem("ups", JSON.stringify(upsStorage));
+      if (isVendorFound) {
+        isVendorFound.upsId = upsId;
+        isVendorFound.amount = amount;
+        isVendorFound.buyNowCart = false;
+        localStorage.setItem("ups", JSON.stringify(upsStorage));
+      } else {
+        upsStorage.push({ upsId, amount, vendorId , buyNowCart : false });
+        localStorage.setItem("ups", JSON.stringify(upsStorage));
+      }
     }
-    window.location.href = `/shoping-cart.html`;
+
+
+    if(!isNaN(buyNowProductId)) {
+      window.location.href = `/shoping-cart.html?productId=${buyNowProductId}`;
+    } else {
+      window.location.href = `/shoping-cart.html`;
+    }
   }
 };

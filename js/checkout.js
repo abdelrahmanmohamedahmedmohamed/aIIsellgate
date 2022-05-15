@@ -1,5 +1,4 @@
-import * as consts from '/js/consts.js';
-
+import * as consts from "/js/consts.js";
 
 let getShoopingTable = () => {
   let table = document.getElementsByClassName("table-shopping-cart")[0];
@@ -102,7 +101,12 @@ let createProduct = (element) => {
   return data;
 };
 window.goToShippingCompanies = (vendorid) => {
-  window.location.href = `shippingCompany.html?vendorid=${vendorid}`;
+  let buyNowProductId = parseInt(getQueryParamaters().productId);
+  if (!isNaN(buyNowProductId)) {
+    window.location.href = `shippingCompany.html?vendorid=${vendorid}&productId=${buyNowProductId}`;
+  } else {
+    window.location.href = `shippingCompany.html?vendorid=${vendorid}`;
+  }
 };
 
 let createVendorRow = (element) => {
@@ -130,18 +134,28 @@ let createVendorRow = (element) => {
   return data;
 };
 window.goToPurshasePage = () => {
-  window.location.href = "/purchasePage.html";
-}
+  let buyNowProductId = parseInt(getQueryParamaters().productId);
+  if (!isNaN(buyNowProductId))
+    window.location.href = `/purchasePage.html?productId=${buyNowProductId}`;
+  else window.location.href = "/purchasePage.html";
+};
+window.createForm = (element, table, index) => {
+  let vendorRow = createVendorRow(element);
+  let data = createProduct(element);
+  if (index === 0) table.innerHTML += vendorRow;
+  table.innerHTML += data;
+};
 let generateShoppingCart = (bigCart) => {
+  let buyNowProductId = parseInt(getQueryParamaters().productId);
   let table = getShoopingTable();
   for (var i = 0; i < bigCart.length; i++) {
-    var value = bigCart[i];
-    bigCart[i].forEach((element, index) => {
-      let vendorRow = createVendorRow(element);
-      let data = createProduct(element);
-      if (index === 0) table.innerHTML += vendorRow;
-      table.innerHTML += data;
-    });
+    if (!isNaN(buyNowProductId)) {
+      createForm(bigCart[i], table, i);
+    } else {
+      bigCart[i].forEach((element, index) => {
+        createForm(element, table, index);
+      });
+    }
   }
   var merged = [].concat.apply([], bigCart).reduce(function (a, b) {
     return a + b["price"];
@@ -151,6 +165,7 @@ let generateShoppingCart = (bigCart) => {
   let totalHolders = document.getElementById("totals-holders");
   if (ups !== null) {
     if (ups.length !== 0) {
+      ups = ups.filter((a) => a.buyNowCart === !isNaN(buyNowProductId));
       ups.forEach((value) => {
         totalHolders.innerHTML += addNewCost(value.amount);
       });
@@ -172,11 +187,22 @@ let getTableShoppingCart = (bigCart) => {
 };
 
 let getBigCart = () => {
-  fetch(`${consts.default.baseUrl}bigcart?id=${consts.default.getCurrentUser()}`)
+  fetch(
+    `${consts.default.baseUrl}bigcart?id=${consts.default.getCurrentUser()}`
+  )
     .then((result) => {
       return result.json();
     })
     .then((bigCart) => {
+      let buyNowProductId = parseInt(getQueryParamaters().productId);
+      if (!isNaN(buyNowProductId)) {
+        console.log(buyNowProductId);
+        var merged = [].concat
+          .apply([], bigCart)
+          .filter((a) => a.id === buyNowProductId);
+        console.log(merged);
+        bigCart = merged;
+      }
       getTableShoppingCart(bigCart);
     });
 };

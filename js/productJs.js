@@ -23,7 +23,10 @@ let product = {};
 getProduct();
 
 function getProduct() {
-    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getSpecialPru?id=${parId}&customerid=${localStorage.getItem("loginUserId")}`)
+    let user = localStorage.getItem("loginUserId");
+    if(user === null)
+        user = localStorage.getItem("guestUserId");
+    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getSpecialPru?id=${parId}&customerid=${user}`)
         .then(
             function(productResponse) {
                 return productResponse.json();

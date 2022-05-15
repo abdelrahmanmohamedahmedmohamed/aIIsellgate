@@ -1101,14 +1101,14 @@
 <script src="js/cart.js" type="module"></script>
 <script src="js1/index.js" type="module"></script>
 
-    
-    
-   
-    
-    
-    
-    
-    
-
+<script>
+	let ups = JSON.parse(localStorage.getItem("ups"));
+	if(ups !== null) {
+	ups = ups?.filter((a) => a.buyNowCart !== true);
+	localStorage.setItem("ups", JSON.stringify(ups));
+	}
+	let loginUserId = localStorage.getItem("loginUserId");
+    loginUserId === null ? localStorage.setItem("guestUserId" , 0) : loginUserId;
+</script>
 </body>
 </html>

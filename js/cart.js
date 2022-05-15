@@ -1,9 +1,12 @@
-import * as consts from '/js/consts.js';
-
+import * as consts from "/js/consts.js";
 let enableDisabling = true;
 const getAddToCartButton = () => {
   let addToCartButton = document.querySelector(".addToCartBtn");
   return addToCartButton;
+};
+const getBuyNowButton = () => {
+  let buyNowBtnButton = document.querySelector(".buyNowBtn");
+  return buyNowBtnButton;
 };
 const getCart = () => {
   let cart = document.querySelector(".js-show-cart");
@@ -14,11 +17,26 @@ const getHeaderCartContent = () => {
   let cartData = headerCartContent.getElementsByClassName(
     "header-cart-wrapitem w-full"
   );
-  if (cartData !== undefined ) cartData[0].remove();
+  if (cartData !== undefined) cartData[0].remove();
   return headerCartContent;
 };
 
+// buy now
+window.goToCheckout = () => {
+  let productId = parseInt(getQueryParamaters().proId);
+  window.location.href = `/shoping-cart.html?productId=${productId}`;
+};
+
 let addToCartButton = getAddToCartButton();
+let buyNowButton = getBuyNowButton();
+if (buyNowButton !== null) {
+  console.log("ok");
+  buyNowButton.addEventListener("click", () => {
+    console.log("go");
+    goToCheckout();
+  });
+}
+
 let cartIcon = getCart();
 window.getQueryParamaters = () => {
   const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -125,14 +143,12 @@ let addToCart = (cart) => {
   });
 };
 let getProductAndPush = (cart, productId) => {
-  fetch(
-    `${consts.default.baseUrl}getSpecialPru?id=${productId}`
-  )
+  fetch(`${consts.default.baseUrl}getSpecialPru?id=${productId}`)
     .then(function (productResponse) {
       return productResponse.json();
     })
     .then(function (productData) {
-      cart = [...cart , productData];
+      cart = [...cart, productData];
       populateProducts(cart);
     });
 };

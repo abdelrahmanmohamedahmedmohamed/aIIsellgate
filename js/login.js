@@ -51,6 +51,7 @@ if(email == ""||password == ""){
                             if (loginObj.state == "1") {
                           let loginUserId =loginObj.id;
                           localStorage.setItem("loginUserId", loginUserId);
+                          localStorage.removeItem("guestUserId");
                           loginSuccessMsg.style.display = "inherit";
                           loginerrorMsgNotExist.style.display = "none";
                           loginerrorMsgAlExist.style.display = "none";
