@@ -6,6 +6,7 @@ body {
 }
 .table-responsive {
     margin: 30px 0;
+	height: 600px;
 }
 .table-wrapper {
     min-width: 1000px;

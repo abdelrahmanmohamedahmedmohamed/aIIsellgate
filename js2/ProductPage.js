@@ -3,7 +3,7 @@ let comments = [];
 getComments();
 
 function getComments() {
-    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/customerorder?id=${localStorage.getItem("loginUserId")}`)
+    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/customerorder?id=${localStorage.getItem("loginUserId")}`)
     .then(
         function(getCommentsResponses) {
             return getCommentsResponses.json();

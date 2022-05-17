@@ -1,19 +1,52 @@
+// var form = document.getElementById('form')
+// form.addEventListener('submit',function(e){
+//   e.preventDefault()
+//   var title =  document.getElementById('CreditCard').value
+//   var date =  document.getElementById('day_month').value
+//   var rating =  document.getElementById('year').value
+//   var prodid =  document.getElementById('ccv').value
+//   fetch("https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/addcard",{
+//     method:'POST',
+//     body:JSON.stringify({
+     
+//       reviewtitle:CreditCard,
+// datee:day_month,
+// rat:year,
+// prudid:ccv,    
+//     }),
+//     headers: new Headers({
+//                     'Content-Type': 'application/json; charset=UTF-8'
+//                 })
+//   })
+//   .then(function(response){
+//     return response.json()
+//   })
+//   .then(function(data){
+//     console.log(data)
+//   })
+// })
+
+
+
+// http://a7bb-41-237-180-230.ngrok.io/prud
 let saveCardIntoDataBase = (creditCardNumber, month, year, cvv) => {
-    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/addcard`, {
+    fetch(`http://cros-anywhere.herokuapp.com/http://a7bb-41-237-180-230.ngrok.io/addcard`, {
         method: "POST",
+        mode : 'cors',
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          customerid:localStorage.getItem("loginUserId"),
             number: creditCardNumber,
-            exp_month: month,
-            exp_year: year,
-            cvc : cvv
+             exp_month: month,
+             exp_year: year,
+             cvc : cvv
         }),
       }).then((result) => {
           console.log(result);
-      });
+      }) 
 };
 let saveCard = () => {
   let creditCardNumber = document.getElementById("ccnumber")?.value;
@@ -29,6 +62,46 @@ let saveCard = () => {
 
   saveCardIntoDataBase(creditCardNumber, month, year, cvv);
 };
+
+// start addvisa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//end addvisa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //post requst by fethch
 const formPostLocation = document.getElementsByClassName("formPostLocation");
@@ -49,7 +122,7 @@ if (formPostLocation !== undefined) {
       postAirline();
       function postAirline() {
         const url =
-          "http://cros-anywhere.herokuapp.com/https://sellgateproproj.herokuapp.com/PostMessage";
+          "http://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/PostMessage";
 
         let data = {
           id: floatingId,
@@ -73,9 +146,7 @@ if (formPostLocation !== undefined) {
           .then(function (data2) {
             console.log(data2);
           })
-          .catch(function (error2) {
-            console.log("FETCH POST ERROR IS :" + error2);
-          });
+         
       }
     });
 }

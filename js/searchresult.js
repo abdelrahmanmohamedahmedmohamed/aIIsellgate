@@ -11,7 +11,7 @@ let getSearchHomeArr = [];
         
         function getSearchHome(SearchFiledValuef) {
             console.log("par:"+SearchFiledValuef)
-            fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/sreachresult?name=${SearchFiledValuef}`)
+            fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/sreachresult?name=${SearchFiledValuef}`)
                 .then(
                     function(getSearchHomeResponse) {
                         return getSearchHomeResponse.json();

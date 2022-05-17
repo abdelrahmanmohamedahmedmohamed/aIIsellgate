@@ -5,7 +5,7 @@ let AllOrdersProducts = [];
 getAllOrders();
 
 function getAllOrders() {
-    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/orderbyvendor?vendorid=${localStorage.getItem("loginUserId")}`)
+    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/orderbyvendor?vendorid=${localStorage.getItem("loginUserId")}`)
     
         .then(
             function(getAllOrdersresponses) { //(entire HTTP response)

@@ -76,7 +76,8 @@
 										<a class="dropdown-item" href="userOrders.html">Vendor Orders</a>
 									<a class="dropdown-item" href="subscribeVendors.html">Subscribers for Vendor</a>
 										 <a class="dropdown-item" href="upload.html">Upload Product</a>
-										
+										 <a class="dropdown-item profLink" href="" >Profile</a>
+										 <!-- profile.html?venId=2 -->
 										
 										</div>
 							</li>
@@ -90,7 +91,7 @@
 				</div>
 			</div>
 
-			<div class=" how-shadow1"><!--wrap-menu-desktop-->
+			<div class="how-shadow1"><!--wrap-menu-desktop-->
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
@@ -119,6 +120,7 @@
 							<li>
 								<a href="contact.html">Contact</a>
 							</li>
+
 							<li class="loginBtn">
 								<a href="signin.html">Login</a>
 							</li>
@@ -264,7 +266,7 @@
 				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10  js-show-cart">
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
-
+				
 				<a href="Location.html" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-11 p-r-11 " data-toggle="modal" data-target="#staticBackdrop">
 					<i class="zmdi zmdi-globe"></i>
 <!--                            <i class="zmdi zmdi-pin animated infinite wobble zmdi-hc-fw"></i>-->
@@ -295,7 +297,8 @@
 					
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
+							<!-- <img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span> -->
+							
 						</a>
 
 					
@@ -331,9 +334,36 @@
 				<li>
 					<a href="contact.html">Contact</a>
 				</li>
+				
 				<li class="loginBtn">
 					<a href="signin.html">Login</a>
 				</li>
+				<li class="nav-item dropdown"> 
+					<a href="#" class="flex-c-m trans-04 p-lr-25 nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
+					</a>
+							<div class="dropdown-menu dropdown-menux" aria-labelledby="navbarDropdown">
+<!--
+								<a class="dropdown-item" href="#"></a>
+							<a class="dropdown-item" href="#">  </a>
+-->
+								 
+					   
+						 <h6 class="p-3" style="color:aqua;">Account Settings</h6>  
+<!--
+							<a class="dropdown-item" href="#">  </a>
+								 <a class="dropdown-item" href="#"> </a>
+-->
+								<a class="dropdown-item" href="settings.html">Settings</a>
+								<a class="dropdown-item" href="ProductPage.html">Orders</a>
+								<a class="dropdown-item" href="userOrders.html">Vendor Orders</a>
+							<a class="dropdown-item" href="subscribeVendors.html">Subscribers for Vendor</a>
+								 <a class="dropdown-item" href="upload.html">Upload Product</a>
+								 <a class="dropdown-item profLink" href="" >Profile</a>
+								 <!-- profile.html?venId=2 -->
+								
+								</div>
+					</li>
 			</ul>
 		</div>
 
@@ -1103,12 +1133,14 @@
 
 <script>
 	let ups = JSON.parse(localStorage.getItem("ups"));
+	console.log(ups)
 	if(ups !== null) {
 	ups = ups?.filter((a) => a.buyNowCart !== true);
 	localStorage.setItem("ups", JSON.stringify(ups));
 	}
 	let loginUserId = localStorage.getItem("loginUserId");
     loginUserId === null ? localStorage.setItem("guestUserId" , 0) : loginUserId;
+	
 </script>
 </body>
 </html>

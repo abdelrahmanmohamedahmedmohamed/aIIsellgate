@@ -94,6 +94,8 @@
 										<a class="dropdown-item" href="userOrders.html">Vendor Orders</a>
 									<a class="dropdown-item" href="subscribeVendors.html">Subscribers for Vendor</a>
 										 <a class="dropdown-item" href="upload.html">Upload Product</a>
+										 <a class="dropdown-item profLink" href="" >Profile</a>
+										 <!-- profile.html?venId=2 -->
 										
 										</div>
 							</li>
@@ -107,18 +109,18 @@
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop how-shadow1">
+			<div class=" how-shadow1">
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
 					<a href="index.html" class="logo">
-						<img src="images/LOGO/pzakoYP.png" alt="IMG-LOGO">
+						<img src="images/LOGO/pzakoYP.png" alt="IMG-LOGO" class="logo1">
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop pt-5">
 						<ul class="main-menu">
-							<li>
+							<li class="active-menu">
 								<a href="index.html">Home</a>
 							
 							</li>
@@ -129,7 +131,7 @@
 
 					
 
-							<li class="active-menu">
+							<li >
 								<a href="about.html">About</a>
 							</li>
 
@@ -157,110 +159,110 @@
 <!--                            <i class="zmdi zmdi-pin animated infinite wobble zmdi-hc-fw"></i>-->
 						</a>
 					</div>
-					<div class="container  fixed-bottom ">
-						<!--  Button trigger modal  -->
-				<!--
-				  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-					location
-				  </button>
-				-->
-				
-				  <!-- Modal -->
-				  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-scrollable">
-					  <div class="modal-content">
-						<div class="modal-header">
-						  <h5 class="modal-title" id="staticBackdropLabel">
-							Choose your location
-						  </h5>
-						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						  </button>
-						</div>
-						<div class="modal-body">
-				
-				
-						  <p class="form-group">
-							Delivery options and delivery speeds may vary for different locations
-						  </p>
-				
-						  <div class="form-group locationAPI">
-				
+					<div class="container location fixed-bottom">
+						<!-- Button trigger modal -->
+					
+					  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+						location
+					  </button> -->
+					
+					
+					  <!-- Modal -->
+					  <div class="modal fade location11" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-scrollable">
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <h5 class="modal-title" id="staticBackdropLabel">
+								Choose your location
+							  </h5>
+							  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="modal-body">
+					
+					
+							  <p class="form-group">
+								Delivery options and delivery speeds may vary for different locations
+							  </p>
+					
+							  <div class="form-group locationAPI">
+					
+							  </div>
+					
+							  
+					
+					
+							</div>
+							<div class="modal-footer">
+							  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							  <button type="submit" class="btn btn-primary" data-target="#myModal" data-toggle="modal" data-dismiss="modal">Add new location</button>
+							</div>
 						  </div>
-				
-						  
-				
-				
-						</div>
-						<div class="modal-footer">
-						  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						  <button type="submit" class="btn btn-primary" data-target="#myModal" data-toggle="modal" data-dismiss="modal">Add new location</button>
 						</div>
 					  </div>
-					</div>
-				  </div>
-				
-				
-				
-				  <!--Second Modal-->
-				
-				  <div class="modal fade" data-backdrop="static" id="myModal">
-					<div class="modal-dialog modal-dialog-scrollable">
-					  <div class="modal-content">
-						<div class="modal-header">
-						  <h5 class="modal-title">Add New location</h5>
-						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						  </button>
-						</div>
-						<div class="modal-body">
-				
-				
-						  <!--form second modal-->
-						  <form class="formPostLocation" >
-							<div class="form-group">
-							  <label for="inputName">Full Name</label>
-							  <input type="text" class="form-control" id="inputFullName" placeholder="">
+					
+					
+					
+					  <!--Second Modal-->
+					
+					  <div class="modal fade" data-backdrop="static" id="myModal">
+						<div class="modal-dialog modal-dialog-scrollable">
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <h5 class="modal-title">Add New location</h5>
+							  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							  </button>
 							</div>
-							<div class="form-group">
-							  <label for="inputAddress">Address</label>
-							  <input type="text" class="form-control" id="inputAddress" placeholder="">
-							</div>
-							<div class="form-group">
-							  <label for="inputCountry">Country</label>
-							  <input type="text" class="form-control" id="inputCountry" placeholder="">
+							<div class="modal-body">
+					
+					
+							  <!--form second modal-->
+							  <form class="formPostLocation" >
+								<div class="form-group">
+								  <label for="inputName">Full Name</label>
+								  <input type="text" class="form-control" id="inputFullName" placeholder="">
+								</div>
+								<div class="form-group">
+								  <label for="inputAddress">Address</label>
+								  <input type="text" class="form-control" id="inputAddress" placeholder="">
+								</div>
+								<div class="form-group">
+								  <label for="inputCountry">Country</label>
+								  <input type="text" class="form-control" id="inputCountry" placeholder="">
+								  
+								</div>
+								<div class="form-group">
+								  <label for="inputCity">City</label>
+								  <input type="text" class="form-control" id="inputCity" placeholder="">
+								  
+								</div>
+								<div class="form-group">
+								  <label for="inputPhone">Phone</label>
+								  <input type="text" class="form-control" id="inputPhone" placeholder="">
+								</div>
+								<div class="form-group">
+								  <label for="inputCode">Code</label>
+								  <input type="text" class="form-control" id="inputCode" placeholder="">
+								</div>
+							  </form>
+							  
 							  
 							</div>
-							<div class="form-group">
-							  <label for="inputCity">City</label>
-							  <input type="text" class="form-control" id="inputCity" placeholder="">
-							  
+					
+							<!--End second form-->
+					
+					
+							<div class="modal-footer">
+							  <button type="button" class="btn btn-outline-primary btnBack"  data-target="#staticBackdrop" data-toggle="modal" data-dismiss="modal">Back</button>
+							  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							  <button type="button" class="btn btn-primary btnPostLocation">Save</button>
 							</div>
-							<div class="form-group">
-							  <label for="inputPhone">Phone</label>
-							  <input type="text" class="form-control" id="inputPhone" placeholder="">
-							</div>
-							<div class="form-group">
-							  <label for="inputCode">Code</label>
-							  <input type="text" class="form-control" id="inputCode" placeholder="">
-							</div>
-						  </form>
-						  
-						  
-						</div>
-				
-						<!--End second form-->
-				
-				
-						<div class="modal-footer">
-						  <button type="button" class="btn btn-outline-primary btnBack"  data-target="#staticBackdrop" data-toggle="modal" data-dismiss="modal">Back</button>
-						  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						  <button type="button" class="btn btn-primary btnPostLocation">Save</button>
+						  </div>
 						</div>
 					  </div>
-					</div>
-				  </div>
-				</div>
+					</div> 
 				</nav>
 			</div>	
 		</div>
@@ -269,7 +271,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.html"><img src="images/LOGO/pzakoYP.png" alt="IMG-LOGO"></a>
+				<a href="index.html"><img src="images/LOGO/pzakoYP.png" alt="IMG-LOGO" class="logo"></a>
 			</div>
 
 			<!-- Icon header -->
@@ -311,7 +313,7 @@
 					
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
+							<!-- <img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span> -->
 						</a>
 
 					
@@ -350,6 +352,32 @@
 				<li class="loginBtn">
 					<a href="signin.html">Login</a>
 				</li>
+				<li class="nav-item dropdown"> 
+					<a href="#" class="flex-c-m trans-04 p-lr-25 nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
+					</a>
+							<div class="dropdown-menu dropdown-menux" aria-labelledby="navbarDropdown">
+<!--
+								<a class="dropdown-item" href="#"></a>
+							<a class="dropdown-item" href="#">  </a>
+-->
+								 
+					   
+						 <h6 class="p-3" style="color:aqua;">Account Settings</h6>  
+<!--
+							<a class="dropdown-item" href="#">  </a>
+								 <a class="dropdown-item" href="#"> </a>
+-->
+								<a class="dropdown-item" href="settings.html">Settings</a>
+								<a class="dropdown-item" href="ProductPage.html">Orders</a>
+								<a class="dropdown-item" href="userOrders.html">Vendor Orders</a>
+							<a class="dropdown-item" href="subscribeVendors.html">Subscribers for Vendor</a>
+								 <a class="dropdown-item" href="upload.html">Upload Product</a>
+								 <a class="dropdown-item profLink" href="" >Profile</a>
+								 <!-- profile.html?venId=2 -->
+								
+								</div>
+					</li>
 			</ul>
 		</div>
 
@@ -515,7 +543,7 @@
 
 				<table class="half-input-table visamasterCard">
 					<tr class="Credit-card">
-						<th class="column-1">MasterCard</th>
+						<th class="column-1"><i class="fa fa-cc-visa" aria-hidden="true"></i> MasterCard</th>
 						<th class="column-3">Expires on</th>
 
 					</tr>
@@ -525,7 +553,7 @@
 
 					</tr>
 				</table>
-				<a href="Visa/visa.html" class="btn btn-link card-button-model addvisa" data-target="#thisModal"
+				<a href="visa.html" class="btn btn-link card-button-model addvisa" data-target="#thisModal"
 					data-toggle="modal">
 					<i class="fa fa-plus" aria-hidden="true"> </i>
 					<span >Add To Credit Card</span>
@@ -685,10 +713,12 @@
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 	<script src="js/cart.js" type="module"></script>
+	<script src="js1/index.js" type="module"></script>
+
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
+		crossorigin="anonymous"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 		crossorigin="anonymous"></script>
@@ -702,7 +732,7 @@
 	<script src="js/productJs.js"></script>
 	<script src="js/cart.js" type="module"></script>
 	<script src="js/purchase.js" type="module"></script>
-	<script src="js1/index.js"></script>
+	<script src="js/visa.js" type="module"></script>
 
 </body>
 

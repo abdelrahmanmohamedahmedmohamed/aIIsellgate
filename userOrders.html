@@ -28,6 +28,12 @@
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+	    <!-- FontAwesome CSS -->
+    <!-- <link rel="stylesheet" href="css/all.css"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom main1CRM  CSS -->
+    <link rel="stylesheet" href="css/main1CRM.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -35,12 +41,7 @@
 
 
 
-    <!-- FontAwesome CSS -->
-    <!-- <link rel="stylesheet" href="css/all.css"> -->
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- custom main1CRM  CSS -->
-    <link rel="stylesheet" href="css/main1CRM.css">
+
 </head>
 
 <body class="OrdersBKg animsition">
@@ -79,10 +80,11 @@
 										<a class="dropdown-item" href="userOrders.html">Vendor Orders</a>
 									<a class="dropdown-item" href="subscribeVendors.html">Subscribers for Vendor</a>
 										 <a class="dropdown-item" href="upload.html">Upload Product</a>
+										 <a class="dropdown-item profLink" href="" >Profile</a>
+										 <!-- profile.html?venId=2 -->
 										
 										</div>
 							</li>
-					
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							<i class="fa fa-sign-out logout" ></i>
 						</a>
@@ -92,7 +94,7 @@
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop how-shadow1">
+			<div class=" how-shadow1">
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
@@ -114,7 +116,7 @@
 
 					
 
-							<li class="active-menu">
+							<li>
 								<a href="about.html">About</a>
 							</li>
 
@@ -296,7 +298,7 @@
 					
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
+							<!-- <img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span> -->
 						</a>
 
 					
@@ -335,6 +337,32 @@
 				<li class="loginBtn">
 					<a href="signin.html">Login</a>
 				</li>
+				<li class="nav-item dropdown"> 
+					<a href="#" class="flex-c-m trans-04 p-lr-25 nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
+					</a>
+							<div class="dropdown-menu dropdown-menux" aria-labelledby="navbarDropdown">
+<!--
+								<a class="dropdown-item" href="#"></a>
+							<a class="dropdown-item" href="#">  </a>
+-->
+								 
+					   
+						 <h6 class="p-3" style="color:aqua;">Account Settings</h6>  
+<!--
+							<a class="dropdown-item" href="#">  </a>
+								 <a class="dropdown-item" href="#"> </a>
+-->
+								<a class="dropdown-item" href="settings.html">Settings</a>
+								<a class="dropdown-item" href="ProductPage.html">Orders</a>
+								<a class="dropdown-item" href="userOrders.html">Vendor Orders</a>
+							<a class="dropdown-item" href="subscribeVendors.html">Subscribers for Vendor</a>
+								 <a class="dropdown-item" href="upload.html">Upload Product</a>
+								 <a class="dropdown-item profLink" href="" >Profile</a>
+								 <!-- profile.html?venId=2 -->
+								
+								</div>
+					</li>
 			</ul>
 		</div>
 
@@ -444,7 +472,7 @@
   <!-------------------------------------------------------------------------->
     <!-- SECTION :section of header-->
     <!-------------------------------------------------------------------------->
-    <div class="container maska">
+    <div class="container maska mt-5">
     
     <section class="generalHeader allordersHeader">
         <div class="container ">
@@ -529,9 +557,10 @@
 <!--===============================================================================================-->
 <script src="js/main.js"></script>
 <script src="js/cart.js" type="module"></script>
+<script src="js1/index.js" type="module"></script>
     <!--  JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <!--custom allCustomersCRM JS-->

@@ -4,7 +4,7 @@ import * as consts from "/js/consts.js";
 
 let getComments = () => {
   fetch(
-    `https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getLocation?id=1`
+    `https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/getLocation?id=1`
   )
     .then(function (getCommentsResponses) {
       return getCommentsResponses.json();
@@ -92,7 +92,7 @@ document
     postAirline();
     function postAirline() {
       const url =
-        "http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/PostLocation";
+        "http://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/PostLocation";
 
       let data = {
         id: localStorage.getItem("loginUserId"),

@@ -7,7 +7,7 @@
   margin-right: auto;
   
 }
-.btn{
+.btn1{
   
     background-color:#0a0a23;
     color: #fff;
@@ -18,7 +18,7 @@
     min-width: 120px;
     
 }
-.btn:hover{
+.btn1:hover{
     color: gray;
 }
 footer{

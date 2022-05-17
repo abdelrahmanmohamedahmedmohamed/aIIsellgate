@@ -118,8 +118,9 @@ getgetvisa();
 
 function getgetvisa() {
   console.log("lkndfkdsnkjfbaskf jnf" + localStorage.getItem("loginUserId"));
+  // https://sellgate91.herokuapp.com/getcard?id=2
   fetch(
-    `https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getcard?id=${localStorage.getItem(
+    `https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/getcard?id=${localStorage.getItem(
       "loginUserId"
     )}`
   )
@@ -132,23 +133,46 @@ function getgetvisa() {
       console.log(data);
       displaygetgetvisa();
       console.log(getvisa.last4);
-      if (getvisa.last4 != "null") {
+      if (getvisa.last4 != null) {
         document.getElementsByClassName("addvisa")[0].style.display = "none";
 
         console.log("esfsdgfdsf");
       }
+    else{
+      document.getElementsByClassName("last4")[0].innerHTML = "";
+      document.getElementsByClassName("expdata")[0].innerHTML = "";
+    }
     })
     .catch(function (error) {
       console.log("FETCH ERROR IS :" + error);
     });
 }
 function displaygetgetvisa() {
-  document.getElementsByClassName("last4")[0].innerHTML = getvisa.last4;
-  document.getElementsByClassName("expdata")[0].innerHTML = getvisa.expdate;
+    document.getElementsByClassName("last4")[0].innerHTML = getvisa.last4;
+    document.getElementsByClassName("expdata")[0].innerHTML = getvisa.expdate;
 }
 
-/* Start Location from  purchase*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Location from  purchase*/
 //getAirline by fetch get
 let getprimarylocation = {};
 getgetprimarylocation();
@@ -156,7 +180,7 @@ getgetprimarylocation();
 function getgetprimarylocation() {
   console.log("welcomme");
   fetch(
-    `http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getprimarylocation?id=1`
+    `https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/getprimarylocation?id=1`
   )
     .then(function (response) {
       //(entire HTTP response)
@@ -176,5 +200,13 @@ function displaygetprimarylocation() {
   document.getElementsByClassName("locationstreet1")[0].innerHTML =
     getprimarylocation.city;
 }
-
 /* End Location from  purchase*/
+
+
+
+
+
+
+
+
+

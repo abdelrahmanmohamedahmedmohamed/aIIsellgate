@@ -199,6 +199,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 [ Header Desktop ]*/
 
 .container-menu-desktop {
+  /* position: fixed; */
   height: auto;
   width: 100%;
   position: relative;
@@ -311,6 +312,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   display: flex;
   align-items: center;
   background-color: transparent;
+  z-index: 1;
 }
 
 
@@ -2670,6 +2672,7 @@ input.num-product::-webkit-inner-spin-button {
 
 /*---------------------------------------------*/
 .bg-img1 {
+  margin-top: 10px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3487,14 +3490,11 @@ text-align: center;
 
 
 .dropdown-menux{
-  z-index: 1 !important;
-  } 
+z-index: 1000 !important;
+} 
 
 
-.location11{
- 
-z-index: 9999;
-}
+
 /* .carousel-item{
   height: 1600px;
 } */
@@ -3510,14 +3510,27 @@ footer{
 .searchIcon{
   color:black;
 }
+
+
+
 .limiter-menu-desktop .logo .logo1{
-  width: 110px;
+  width: 140px;
   height: 80px;
 }
-.fixed-bottom {
+
+@media (max-width: 990px) {
+  .wrap-header-mobile .logo-mobile .logo1{
+      width: 80px;
+     height: 50px;
+  }  
+}
+ .fixed-bottom {
   position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 30000;
 } 
+.section-slide{
+  padding-top: 10px;
+}

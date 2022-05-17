@@ -287,7 +287,7 @@
 //localStorage.getItem("loginUserId")
 
 
-fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud').then((data)=>{
+fetch('https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/Prud').then((data)=>{
     return data.json();
 }).then((completedata)=>{
     let data1="";
@@ -371,7 +371,7 @@ let logout = () => {
 }
 
 
-fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud').then((data)=>{
+fetch('https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/Prud').then((data)=>{
     return data.json();
 }).then((completedata)=>{
     let data1="";
@@ -444,7 +444,7 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
 
 
 
-fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud').then((data)=>{
+fetch('https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/Prud').then((data)=>{
     return data.json();
 }).then((completedata)=>{
     let data1="";
@@ -515,7 +515,7 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
 
 
 
-fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud').then((data)=>{
+fetch('https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/Prud').then((data)=>{
     return data.json();
 }).then((completedata)=>{
     let data1="";
@@ -588,7 +588,7 @@ fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud'
 
 
 
-fetch('https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Prud').then((data)=>{
+fetch('https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/Prud').then((data)=>{
     return data.json();
 }).then((completedata)=>{
     let data1="";
@@ -674,16 +674,18 @@ if(localStorage.getItem("loginUserId") == null)
 {
     
     document.getElementsByClassName('MyAccountImage')[1].style.display ="none"
+    // document.getElementsByClassName("MyAccountImage")[2].style.display ="none"
 
     MyAccountImage.style.display="none"
    
-   // document.getElementsByClassName('MyAccountImage')[1].style.display ="none"
+//    document.getElementsByClassName('MyAccountImage')[1].style.display ="none"
 
 
 }else{
     getInfoTopHome()
     document.getElementsByClassName("loginBtn")[0].style.display ="none"
     document.getElementsByClassName("loginBtn")[1].style.display ="none"
+    // document.getElementsByClassName("loginBtn")[2].style.display ="none"
 
 
 }
@@ -692,7 +694,7 @@ if(localStorage.getItem("loginUserId") == null)
 
 
 function getInfoTopHome() {
-    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Profile?id=${localStorage.getItem("loginUserId")}`)
+    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/Profile?id=${localStorage.getItem("loginUserId")}`)
         .then(
             function(getInfoTopHomeresponse) { //(entire HTTP response)
                 return getInfoTopHomeresponse.json(); // to next then
@@ -716,10 +718,12 @@ function displaygetInfoTopHome() {
     MyAccountImage.src=getInfoTopHomeobj.image;
     MyAccountName.textContent=getInfoTopHomeobj.fullname;  
     document.getElementsByClassName('MyAccountImage')[1].src=getInfoTopHomeobj.image;
-    document.getElementsByClassName('MyAccountName')[1].src=getInfoTopHomeobj.image;
+    document.getElementsByClassName('MyAccountName')[1].textContent=getInfoTopHomeobj.fullname;
+    // document.getElementsByClassName('MyAccountImage')[2].src=getInfoTopHomeobj.image;
+    // document.getElementsByClassName('MyAccountName')[2].textContent=getInfoTopHomeobj.fullname;
 }
 
-/* logout*/ 
+
 
 
 document.getElementsByClassName("logout")[0].onclick = function(){
@@ -738,14 +742,15 @@ console.log(localStorage.getItem("loginUserId"));
 document.getElementsByClassName("logout")[1].onclick = function(){
     logout();
 };
-
-
-
 console.log(localStorage.getItem("loginUserId"));
+
+
+
+
 getHistoryHome();
 function getHistoryHome(){
 
-    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/history?customerid=${localStorage.getItem("loginUserId")}`).then((datahist)=>{
+    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/history?customerid=${localStorage.getItem("loginUserId")}`).then((datahist)=>{
   
         return datahist.json();
     }).then((completedata2)=>{
@@ -806,3 +811,47 @@ function getHistoryHome(){
     })
         
     }
+
+
+
+
+
+
+
+
+    /* function of profile link*/ 
+    document.getElementsByClassName('profLink')[0].onclick = function() 
+
+    { 
+        // alert("function one")
+        let user2 = localStorage.getItem("loginUserId");
+        if( localStorage.getItem("guestUserId") == 0){
+            // alert("function one")
+            document.getElementsByClassName('profLink')[0].href="signin.html"
+        }
+        else{
+            document.getElementsByClassName('profLink')[0].href="profile.html?venId=" + user2
+        }
+
+      
+        
+
+
+};
+document.getElementsByClassName('profLink')[1].onclick = function() 
+    
+    { 
+        // alert("function teo")
+        let user2 = localStorage.getItem("loginUserId");
+        if( localStorage.getItem("guestUserId") == 0){
+            // alert("function one")
+            document.getElementsByClassName('profLink')[1].href="signin.html" 
+                
+           }
+           else{
+            document.getElementsByClassName('profLink')[1].href="profile.html?venId=" + user2
+           }
+
+     
+        
+};

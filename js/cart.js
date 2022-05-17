@@ -75,6 +75,7 @@ let getCurrentCart = (isAddToCart = false) => {
       let ids = cart.map((a) => a[key]);
       if (isAddToCart && addToCartButton !== null) {
         addToCartButton.addEventListener("click", () => {
+          
           addToCart(cart);
         });
       }

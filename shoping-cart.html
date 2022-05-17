@@ -70,10 +70,11 @@
 										<a class="dropdown-item" href="userOrders.html">Vendor Orders</a>
 									<a class="dropdown-item" href="subscribeVendors.html">Subscribers for Vendor</a>
 										 <a class="dropdown-item" href="upload.html">Upload Product</a>
+										 <a class="dropdown-item profLink" href="" >Profile</a>
+										 <!-- profile.html?venId=2 -->
 										
 										</div>
 							</li>
-					
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							<i class="fa fa-sign-out logout" ></i>
 						</a>
@@ -83,7 +84,7 @@
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop how-shadow1">
+			<div class="how-shadow1">
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
@@ -287,7 +288,7 @@
 					
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
+							<!-- <img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span> -->
 						</a>
 
 					
@@ -326,6 +327,32 @@
 				<li class="loginBtn">
 					<a href="signin.html">Login</a>
 				</li>
+				<li class="nav-item dropdown"> 
+					<a href="#" class="flex-c-m trans-04 p-lr-25 nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img src="" class="MyAccountImage"> &nbsp; &nbsp; <span class="MyAccountName">My Account</span>
+					</a>
+							<div class="dropdown-menu dropdown-menux" aria-labelledby="navbarDropdown">
+<!--
+								<a class="dropdown-item" href="#"></a>
+							<a class="dropdown-item" href="#">  </a>
+-->
+								 
+					   
+						 <h6 class="p-3" style="color:aqua;">Account Settings</h6>  
+<!--
+							<a class="dropdown-item" href="#">  </a>
+								 <a class="dropdown-item" href="#"> </a>
+-->
+								<a class="dropdown-item" href="settings.html">Settings</a>
+								<a class="dropdown-item" href="ProductPage.html">Orders</a>
+								<a class="dropdown-item" href="userOrders.html">Vendor Orders</a>
+							<a class="dropdown-item" href="subscribeVendors.html">Subscribers for Vendor</a>
+								 <a class="dropdown-item" href="upload.html">Upload Product</a>
+								 <a class="dropdown-item profLink" href="" >Profile</a>
+								 <!-- profile.html?venId=2 -->
+								
+								</div>
+					</li>
 			</ul>
 		</div>
 
@@ -459,7 +486,7 @@
 									<th class="column-1">Product</th>
 									<th class="column-2"></th>
 									<th class="column-3">Price</th>
-									<th class="column-4">Quantity</th>
+									<th class="column-4"></th>
 									<th class="column-5">Total</th>
 								</tr>
 								<tr class="vendor-row table_row">
@@ -480,18 +507,7 @@
 									<td class="column-2">Fresh Strawberries</td>
 									<td class="column-3">$ 36.00</td>
 									<td class="column-4">
-										<div class="wrap-num-product flex-w m-l-auto m-r-0">
-											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-minus"></i>
-											</div>
-
-											<input class="mtext-104 cl3 txt-center num-product" type="number"
-												name="num-product1" value="1">
-
-											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-plus"></i>
-											</div>
-										</div>
+									
 									</td>
 									<td class="column-5">$ 36.00</td>
 								</tr>
@@ -668,6 +684,7 @@
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 	<script src="js/cart.js" type="module"></script>
+	<script src="js1/index.js" type="module"></script>
 	<script src="js/checkout.js" type="module"></script>
 </body>
 

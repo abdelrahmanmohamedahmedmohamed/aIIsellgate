@@ -4,7 +4,7 @@ getComments();
 
 function getComments() {
   fetch(
-    `http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getLocation?id=1`
+    `http://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/getLocation?id=1`
   )
     .then(function (getCommentsResponses) {
       return getCommentsResponses.json();
@@ -59,7 +59,7 @@ if (postLocation !== undefined) {
     postAirline();
     function postAirline() {
       const url =
-        "http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/PostLocation";
+        "http://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/PostLocation";
 
       let data = {
         id: 1,

@@ -37,7 +37,7 @@ document.getElementsByClassName("allVendorProductBtn")[0].addEventListener("clic
         getProfileInfo();
     });
 function getProfileInfo() {
-    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Profile?id=${vendorIdP}`)
+    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/Profile?id=${vendorIdP}`)
         .then(
             function(profileResponse) {
                 return profileResponse.json();
@@ -69,7 +69,7 @@ function getProfileInfo() {
                     const deleteInfoSendedAll ={
                          id: profileInfoProducts[ch].id
                         }
-                    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/deletPrudect`,
+                    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/deletPrudect`,
                      {
                         method: 'DELETE',
                         headers: {
@@ -115,7 +115,7 @@ function displayProfileInfo() {
     numItemsFSa.textContent=profileInfoProducts.length;
 
     let sallesItemsContainer = '';
-    for (let i = 0; i <profileInfoProducts.length; i++) {
+    for (let i = 0; i <profileInfoProducts.length; i++) { 
   
         let imagesString=profileInfoProducts[i].images;
         let imagesArray = imagesString.split("~");
@@ -160,7 +160,7 @@ document.getElementsByClassName("searchVendorProductBtn")[0].addEventListener("c
         }
 
         function getSearchVendorProduct() {
-            fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getsreachprofile?name=${SearchFiledValue33}&vendorid=${vendorIdP}`)
+            fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/getsreachprofile?name=${SearchFiledValue33}&vendorid=${vendorIdP}`)
                 .then(
                     function(getSearchVendorProductResponse) {
                         return getSearchVendorProductResponse.json();
@@ -189,7 +189,7 @@ document.getElementsByClassName("searchVendorProductBtn")[0].addEventListener("c
      const deleteInfoSended ={
           id: getSearchVendorProductArr[ch2].id
          }
-     fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/deletPrudect`,
+     fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/deletPrudect`,
       {
          method: 'DELETE',
          headers: {
@@ -264,7 +264,7 @@ let AllTransOrdersProducts = [];
 getAllTransOrders();
 
 function getAllTransOrders() {
-    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getTransaction?vendorid=${vendorIdP}`)
+    fetch(`http://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/getTransaction?vendorid=${vendorIdP}`)
         .then(
             function(getAllTransOrdersresponses) { //(entire HTTP response)
                 return getAllTransOrdersresponses.json(); // to next then
@@ -344,7 +344,7 @@ let returnpostacceptdata={};
            
             }
 function insideAccept(){
-         const url = 'http://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/makeTransaction';
+         const url = 'http://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/makeTransaction';
  
          let postAcceptdata = {
              id:idOrderAccept

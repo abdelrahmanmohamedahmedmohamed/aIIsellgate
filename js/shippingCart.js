@@ -2,21 +2,21 @@
 
 let upsList = [];
 fetch(
-  "https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/shippmentRate?customerid=1&prudectid=1"
+  "https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/shippmentRate?customerid=1&prudectid=1"
 )
   // Converting received data to JSON
   .then((response) => response.json())
   .then((json) => {
     upsList = json;
     // Create a variable to store HTML
-    let li = `<thead><tr class=" text-black"><th scope="col">Name of Company</th><th scope="col">servicr</th><th scope="col">Currency</th><th scope="col">Price</th><th scope="col">duration</th><th scope="col">Status</th></tr></thead>`;
+    let li = `<thead><tr class=" text-black"><th scope="col">Name of Company</th><th scope="col">Currency</th><th scope="col">Price</th><th scope="col">duration</th><th scope="col">Status</th></tr></thead>`;
     // Loop through each data and add a table row
     json.forEach((user) => {
       li += `<tbody>
              <tr>
              
                 <td>${user.provider} </td>
-                <td>${user.servicr}</td>   
+                 
                 <td>${user.days} </td>
                 <td>${user.amount} </td>
                 <td>${user.duration}</td>  

@@ -2,7 +2,7 @@ let getCatgorysArr = [];
 getCatgorys();
 
 function getCatgorys() {
-    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getcategory`)
+    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/getcategory`)
         .then(
             function(getCatgorysResponses) { //(entire HTTP response)
                 return getCatgorysResponses.json(); // to next then
@@ -215,7 +215,7 @@ function postUploadAll(allImagesUrlsIn,flat,flng,uProName,uProDescription,uProCa
     uProPrice,uProCurrency,uProBrand,uProColor,uProLength,uProHeight,
     uProWidth,uProWeight) {
  
-    const postUploadAllUrl = 'https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/Upload';
+    const postUploadAllUrl = 'https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/Upload';
 
     let postUploadAllData = {
 

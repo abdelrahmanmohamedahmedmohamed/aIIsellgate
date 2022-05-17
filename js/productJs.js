@@ -26,7 +26,7 @@ function getProduct() {
     let user = localStorage.getItem("loginUserId");
     if(user === null)
         user = localStorage.getItem("guestUserId");
-    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getSpecialPru?id=${parId}&customerid=${user}`)
+    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/getSpecialPru?id=${parId}&customerid=${user}`)
         .then(
             function(productResponse) {
                 return productResponse.json();
@@ -159,7 +159,7 @@ document.getElementsByClassName("btnAddComment")[0].onclick = () => {
         }
 
         function postComment() {
-            const commentUrl = `https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/PostReview`;
+            const commentUrl = `https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/PostReview`;
 
             let commentData = {
                 id:localStorage.getItem("loginUserId"),
@@ -208,7 +208,7 @@ let comments = [];
 
 
 function getComments() {
-    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getReview?id=${parId}`)
+    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/getReview?id=${parId}`)
         .then(
             function(getCommentsResponses) {
                 return getCommentsResponses.json();
@@ -279,7 +279,7 @@ function displayComments() {
 /*********************sec of recommend*****************************/
 function getRecommend(){
 
-fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getrecommendMachine?id=${product.spe_id}`).then((data)=>{
+fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/getrecommendMachine?id=${product.spe_id}`).then((data)=>{
     console.log("recmmoend:"+product.spe_id);
     return data.json();
 }).then((completedata1)=>{
@@ -344,7 +344,7 @@ fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/getre
 /*********************sec of History*****************************/
 function getHistory(){
 
-    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate1.herokuapp.com/history?customerid=${localStorage.getItem("loginUserId")}`).then((datahist)=>{
+    fetch(`https://cros-anywhere.herokuapp.com/https://sellgate91.herokuapp.com/history?customerid=${localStorage.getItem("loginUserId")}`).then((datahist)=>{
   
         return datahist.json();
     }).then((completedata2)=>{
