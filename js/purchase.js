@@ -3,6 +3,61 @@ let getPurchaseTable = () => {
   let table = document.getElementsByClassName("order-table")[0];
   return table;
 };
+
+window.makeOrder = (orderObject) => {
+  fetch(
+    `http://cros-anywhere.herokuapp.com/http://a7bb-41-237-180-230.ngrok.io/makeorder`,
+    {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(orderObject),
+    }
+  )
+    .then((response) => {
+      return response.json();
+    })
+    .then((result) => {
+      if (result !== undefined && "state" in result && parseInt(result.state) === 1) {
+        swal("", "the order has been created successfully", "success");
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 1000);
+      }
+    });
+};
+window.onPayButton = (bigCart, total, upsFees) => {
+  $(".pay-btn").click((event) => {
+    console.log(bigCart);
+    console.log(total);
+    console.log(upsFees);
+
+    let makeOrderObject = {
+      orderResponse: {
+        price: parseInt(total),
+        shanPricel: parseInt(upsFees),
+        currency: "USD",
+        customerid: parseInt(localStorage.getItem("loginUserId")),
+        vendorid: 1,
+      },
+    };
+    let prudectdetails = [];
+    for (var i = 0; i < bigCart.length; i++) {
+      bigCart[i].forEach((element) => {
+        prudectdetails = [
+          ...prudectdetails,
+          { prudect: element.id, qunity: 0, color: "yellow" },
+        ];
+      });
+    }
+    makeOrderObject["prudectdetails"] = prudectdetails;
+    makeOrder(makeOrderObject);
+  });
+};
+
 let removeTableStaticElements = () => {
   let table = getPurchaseTable();
   if (table !== undefined) {
@@ -61,12 +116,14 @@ let generatePurchase = (bigCart) => {
     }
   }
   if (amounts === undefined) amounts = 0;
-  let total = (parseFloat(merged) + parseFloat(amounts)).toFixed("2");
+  let total = parseFloat(merged) + parseFloat(amounts);
+  let totalFixed = (parseFloat(merged) + parseFloat(amounts)).toFixed("2");
   let amountsFixed = amounts.toFixed("2");
-  document.querySelector(".purchase-total").innerHTML = `$${total}`;
+  onPayButton(bigCart, total, amounts);
+  document.querySelector(".purchase-total").innerHTML = `$${totalFixed}`;
   document.querySelector(".ups-fees").innerHTML = `$${amountsFixed}`;
 };
-  
+
 let getTablePurchase = (bigCart) => {
   if (bigCart.length !== 0) {
     removeTableStaticElements();
@@ -91,7 +148,6 @@ let getBigCart = () => {
         console.log(merged);
         bigCart = merged;
       }
-
       getTablePurchase(bigCart);
     });
 };
@@ -137,40 +193,19 @@ function getgetvisa() {
         document.getElementsByClassName("addvisa")[0].style.display = "none";
 
         console.log("esfsdgfdsf");
+      } else {
+        document.getElementsByClassName("last4")[0].innerHTML = "";
+        document.getElementsByClassName("expdata")[0].innerHTML = "";
       }
-    else{
-      document.getElementsByClassName("last4")[0].innerHTML = "";
-      document.getElementsByClassName("expdata")[0].innerHTML = "";
-    }
     })
     .catch(function (error) {
       console.log("FETCH ERROR IS :" + error);
     });
 }
 function displaygetgetvisa() {
-    document.getElementsByClassName("last4")[0].innerHTML = getvisa.last4;
-    document.getElementsByClassName("expdata")[0].innerHTML = getvisa.expdate;
+  document.getElementsByClassName("last4")[0].innerHTML = getvisa.last4;
+  document.getElementsByClassName("expdata")[0].innerHTML = getvisa.expdate;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Start Location from  purchase*/
 //getAirline by fetch get
@@ -201,12 +236,3 @@ function displaygetprimarylocation() {
     getprimarylocation.city;
 }
 /* End Location from  purchase*/
-
-
-
-
-
-
-
-
-
